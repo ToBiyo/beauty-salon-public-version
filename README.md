@@ -1,2 +1,9 @@
-# beauty-salon-public-version
-Public demo repository for a website built for a beauty center. This version contains placeholder content (dummy text and stock images) and is intended solely for portfolio and demonstration purposes. The site is built with Next.js and features a modern, responsive, and conversion-focused layout.
+# Beauty Center Website (Demo)
+
+This is a public demo repository for a website built for a beauty center.  
+All content (text and images) is placeholder and used only for portfolio purposes.  
+The real project is deployed privately.
+
+Built with **Next.js**.
+
+> Full case study and portfolio will be available soon.
