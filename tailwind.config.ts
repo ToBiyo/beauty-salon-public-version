@@ -9,8 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        tortora: "rgba(199,162,139,0.79)",
+        cream: "rgb(247, 228, 198)",
+        blue: "rgb(198,211,226)",
+        avorio: "rgb(255, 250, 247)",
+      },
+      fontFamily: {
+        playfair: ["Playfair Display", "serif"],
+        quicksand: ["Quicksand", "sans-serif"],
       },
     },
   },

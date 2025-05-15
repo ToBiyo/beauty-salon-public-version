@@ -1,0 +1,29 @@
+import React from "react";
+import Image from "next/image";
+import hero from "../../public/assets/images/hero-home.jpg";
+
+export const Hero = () => {
+  return (
+    <div className="flex flex-col items-center gap-20 w-full">
+      <div className="w-full h-[800px] bg-[url(../../public/assets/images/hero-home.jpg)] bg-fixed bg-bottom bg-cover flex relative">
+        <div className="bg-opacity-25 bg-slate-800 h-full w-full absolute]"></div>
+      </div>
+      <div className="flex flex-col items-center gap-10">
+        <h1 className="text-5xl font-playfair text-cyan-700 italic">
+          Lorem ipsum dolor sit amet
+        </h1>
+        <h3 className="text-3xl font-quicksand">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit
+        </h3>
+        <div className="flex gap-8">
+          <button className="py-3 px-8 text-white text-lg bg-cyan-700 rounded-lg">
+            Call
+          </button>
+          <button className="py-3 px-8 text-white text-lg bg-cyan-700 rounded-lg">
+            Text
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
