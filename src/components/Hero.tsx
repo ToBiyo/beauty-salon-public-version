@@ -6,7 +6,7 @@ export const Hero = () => {
   return (
     <div className="flex flex-col items-center gap-20 w-full">
       <div className="w-full h-[800px] bg-[url(../../public/assets/images/hero-home.jpg)] bg-fixed bg-bottom bg-cover flex relative">
-        <div className="bg-opacity-25 bg-slate-800 h-full w-full absolute]"></div>
+        <div className="bg-tortora h-full w-full absolute opacity-60"></div>
       </div>
       <div className="flex flex-col items-center gap-10">
         <h1 className="text-5xl font-playfair text-cyan-700 italic">
