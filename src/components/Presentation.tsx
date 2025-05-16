@@ -4,7 +4,7 @@ import logo from "../../public/assets/images/4 (1).png";
 
 export const Presentation = () => {
   return (
-    <div className="flex items-center h-[700px]  justify-between max-w-[1440px] mx-auto relative">
+    <section className="flex items-center h-[700px]  justify-between max-w-[1440px] mx-auto relative">
       <div className="w-[45%] h-full relative rounded-xl ">
         <div className="absolute h-full w-3/6 bg-cream -z-20 rounded-s-2xl" />
         <Image
@@ -34,6 +34,6 @@ export const Presentation = () => {
           See more
         </button>
       </div>
-    </div>
+    </section>
   );
 };

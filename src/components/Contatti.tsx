@@ -2,7 +2,7 @@ import React from "react";
 
 export const Contatti = () => {
   return (
-    <div className="flex flex-col relative w-full mx-auto my-[300px]  bg-[url(../../public/assets/images/new.jpg)] bg-cover bg-bottom bg-fixed">
+    <section className="flex flex-col relative w-full mx-auto  bg-[url(../../public/assets/images/new.jpg)] bg-cover bg-bottom bg-fixed">
       <div className="absolute w-full h-full bg-cream opacity-35"></div>
       <div
         className={
@@ -53,15 +53,7 @@ export const Contatti = () => {
             </div>
           </div>
         </div>
-        {/* <div className="w-[60%] relative h-full flex justify-end self-center">
-          <Image
-            src={alternative}
-            alt="something"
-            width={200}
-            className="w-[90%] rounded-e-xl mr-10 drop-shadow-xl shadow-black mt-[10%]"
-          />
-        </div> */}
       </div>
-    </div>
+    </section>
   );
 };

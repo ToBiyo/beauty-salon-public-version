@@ -6,7 +6,7 @@ import { Reviews } from "@/components/Reviews";
 
 export default function Home() {
   return (
-    <main>
+    <main className="flex flex-col items-center gap-[300px]">
       <Hero />
       <Services />
       <Presentation />
