@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Footer } from "@/components/Footer";
 
 import "@fontsource-variable/playfair-display";
 import "@fontsource-variable/quicksand";
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={` antialiased`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

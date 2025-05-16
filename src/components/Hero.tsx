@@ -1,7 +1,3 @@
-import React from "react";
-import Image from "next/image";
-import hero from "../../public/assets/images/hero-home.jpg";
-
 export const Hero = () => {
   return (
     <div className="flex flex-col items-center gap-20 w-full">
