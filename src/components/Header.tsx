@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu } from "./Menu";
-import logo from "../../public/assets/images/4 (1).png";
+import logo from "../../public/assets/images/logo-black.png";
 
 export default function Header() {
   return (

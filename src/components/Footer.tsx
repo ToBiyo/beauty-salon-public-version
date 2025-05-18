@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { Menu } from "./Menu";
-import logo from "../../public/assets/images/4 (1).png";
+import logo from "../../public/assets/images/logo-black.png";
 import { ImFacebook } from "react-icons/im";
 import { ImInstagram } from "react-icons/im";
 import { ImPhone } from "react-icons/im";
@@ -9,8 +8,8 @@ import { ImLocation } from "react-icons/im";
 
 export const Footer = () => {
   return (
-    <footer className="mt-56 min-h-[700px] bg-cyan-700 flex flex-col justify-center items-center">
-      <div className="mx-auto flex flex-row w-[1440px] items-start justify-between border-y-2 border-tortora py-20">
+    <footer className="mt-56 min-h-[700px] bg-cyan-700 flex flex-col justify-center items-center relative bottom-0">
+      <div className="mx-auto flex flex-row w-[1440px] items-start justify-between border-y-2 border-tortora py-40">
         <Image src={logo} alt="Logo" width={400} height={60} />
 
         <div className="flex flex-col gap-10 items-center">

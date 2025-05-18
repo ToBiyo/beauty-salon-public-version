@@ -1,6 +1,6 @@
 import Image from "next/image";
 import me from "../../public/assets/images/me.png";
-import logo from "../../public/assets/images/4 (1).png";
+import logo from "../../public/assets/images/logo-black.png";
 
 export const Presentation = () => {
   return (
@@ -15,7 +15,7 @@ export const Presentation = () => {
         />
       </div>
 
-      <div className="flex flex-col w-[50%]  justify-center my-64 h-full  py-20">
+      <div className="flex flex-col w-[50%]  justify-center my-64 h-full py-20">
         <h2 className="font-playfair text-6xl italic text-cyan-700">Titolo</h2>
         <p className="font-quicksand text-lg mt-16 mb-8">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus

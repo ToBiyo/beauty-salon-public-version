@@ -4,6 +4,7 @@ import consulenza from "../../public/assets/images/consulenza.jpg";
 import viso from "../../public/assets/images/viso.jpg";
 import { ServiceCard } from "./ServiceCard";
 import { ServiceData } from "@/lib/types/types";
+import { CallToAction } from "./CallToAction";
 
 const services: ServiceData[] = [
   {
@@ -43,12 +44,11 @@ export const Services = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit
         </h3>
       </div>
-      <div className="flex flex-row flex-wrap justify-between">
+      <div className="flex flex-row flex-wrap justify-between mb-10">
         {services.map((service, index) => {
           return <ServiceCard data={service} key={index} />;
         })}
       </div>
-      {/*  */}
     </section>
   );
 };

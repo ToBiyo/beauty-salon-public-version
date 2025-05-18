@@ -1,4 +1,5 @@
 import { Review } from "@/lib/types/types";
+import { ImStarFull } from "react-icons/im";
 
 export const ReviewCard = ({ reviewData }: { reviewData: Review }) => {
   const { user, review, score } = reviewData;
@@ -10,14 +11,7 @@ export const ReviewCard = ({ reviewData }: { reviewData: Review }) => {
 
       <div className="flex gap-1 mb-2">
         {[...Array(score)].map((_, i) => (
-          <div
-            className="bg-tortora w-[24px] h-[24px]"
-            key={i}
-            style={{
-              clipPath:
-                "polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)",
-            }}
-          />
+          <ImStarFull className="text-tortora w-[24px] h-[24px]" key={i} />
         ))}
       </div>
     </div>
