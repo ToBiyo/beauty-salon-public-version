@@ -2,7 +2,7 @@ import { CallToAction } from "./CallToAction";
 export const Hero = () => {
   return (
     <section className="flex flex-col items-center gap-20 w-full">
-      <div className="w-full h-[600px] bg-[url(../../public/assets/images/hero-home.jpg)] bg-fixed bg-center bg-cover flex relative">
+      <div className="w-full h-[600px] bg-[url(../../public/assets/images/hero-home.jpg)] bg-fixed bg-bottom bg-cover flex relative">
         <div className="bg-tortora h-full w-full absolute opacity-60"></div>
       </div>
       <CallToAction>
