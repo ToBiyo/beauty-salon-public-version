@@ -11,7 +11,7 @@ export const ThreeImagesLayout = ({
   third: StaticImageData;
 }) => {
   return (
-    <>
+    <div className="flex flex-col gap-5 w-full h-full">
       <div className="w-full">
         <Image
           src={main}
@@ -35,6 +35,6 @@ export const ThreeImagesLayout = ({
           />
         </div>
       </div>
-    </>
+    </div>
   );
 };
