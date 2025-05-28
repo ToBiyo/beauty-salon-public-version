@@ -6,11 +6,16 @@ import logo from "../../public/assets/images/logo-black.png";
 
 export default function Header() {
   return (
-    <header className="bg-avorio w-full h-[100px] relative">
+    <header className="bg-avorio w-full h-[100px] relative flex ">
       <div className="fixed z-30 bg-avorio w-full h-[100px]">
-        <div className="flex flex-row items-center justify-between m-auto w-[1440px] h-full">
+        <div className="flex flex-row items-center justify-between mx-auto px-10 h-full md:max-w-[1440px] ">
           <Link href={"/"} className="outline-none">
-            <Image src={logo} alt="f beautyque logo" width={250} />
+            <Image
+              src={logo}
+              alt="f beautyque logo"
+              width={250}
+              className="md:w-[250px] w-[180px]"
+            />
           </Link>
           <Menu />
         </div>

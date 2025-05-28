@@ -1,8 +1,8 @@
-import { FaStar } from "react-icons/fa";
 import { CallToAction } from "./CallToAction";
 import { Review } from "@/lib/types/types";
 import { ReviewCard } from "./ReviewCard";
-
+import { Heading } from "./Heading";
+import { SubHeading } from "./SubHeading";
 //review should be fetched from google places api
 
 const reviews: Review[] = [
@@ -38,29 +38,31 @@ const reviews: Review[] = [
 
 export const Reviews: React.FC = () => {
   return (
-    <section className="w-[1440px] mx-auto grid grid-rows-[1fr_auto] gap-8 ">
+    <section className="xl:max-w-[1440px] pb-[300px] w-[80vw] mx-auto grid grid-rows-[1fr_auto] gap-8 ">
       {/* First Row */}
-      <div className="flex flex-col justify-center h-full mb">
-        <h2 className="text-6xl font-playfair italic text-tortora ">Reviews</h2>
-        <h3 className="text-3xl font-quicksand my-8">What our customers say</h3>
+      <div className="flex flex-col justify-center h-full mb gap-10">
+        <Heading main={false} color="tortora">
+          Reviews
+        </Heading>
+        <SubHeading>What our customers say</SubHeading>
       </div>
 
       {/* Second Row */}
-      <div className="grid grid-cols-4 gap-6 mb-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 mt-12 mb-28">
         {reviews.map((review, index) => {
           return <ReviewCard reviewData={review} key={index} />;
         })}
       </div>
       <CallToAction>
         <>
-          <h2 className="font-playfair text-4xl text-cyan-700 italic">
-            Lorem ipsum dolor sit amet consectetur adipisicing{" "}
-          </h2>
-          <h3 className="font-quicksand text-2xl text-center">
+          <Heading main={false} color="cyan-700">
+            Lorem ipsum dolor sit amet consectetur
+          </Heading>
+          <SubHeading>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
             neque ad enim a illo facilis ea reprehenderit deleniti doloremque
             minima
-          </h3>
+          </SubHeading>
         </>
       </CallToAction>
     </section>

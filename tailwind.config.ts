@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 const config: Config = {
   content: [
@@ -17,6 +18,10 @@ const config: Config = {
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
         quicksand: ["Quicksand", "sans-serif"],
+      },
+      screens: {
+        ...defaultTheme.screens,
+        lg: "1025px",
       },
     },
   },

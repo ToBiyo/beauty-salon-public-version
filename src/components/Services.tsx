@@ -4,7 +4,8 @@ import consulenza from "../../public/assets/images/consulenza.jpg";
 import viso from "../../public/assets/images/viso.jpg";
 import { ServiceCard } from "./ServiceCard";
 import { ServiceData } from "@/lib/types/types";
-import { CallToAction } from "./CallToAction";
+import { SubHeading } from "./SubHeading";
+import { Heading } from "./Heading";
 
 const services: ServiceData[] = [
   {
@@ -35,16 +36,16 @@ const services: ServiceData[] = [
 
 export const Services = () => {
   return (
-    <section className="flex flex-col mx-auto w-[1440px] gap-28">
-      <div className="flex flex-col gap-12 h-full w-[50%]">
-        <h2 className="font-playfair text-5xl text-cyan-700 italic">
+    <section className="flex flex-col mx-auto xl:max-w-[1440px] gap-28 w-[80vw]">
+      <div className="flex flex-col gap-10">
+        <Heading main={false} color="cyan-700">
           I Nostri Servizi
-        </h2>
-        <h3 className="font-quicksand text-2xl ">
+        </Heading>
+        <SubHeading>
           Lorem ipsum dolor sit amet consectetur adipisicing elit
-        </h3>
+        </SubHeading>
       </div>
-      <div className="flex flex-row flex-wrap justify-between mb-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 mb-10">
         {services.map((service, index) => {
           return <ServiceCard data={service} key={index} />;
         })}

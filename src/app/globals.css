@@ -2,13 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background: rgb(255, 250, 247);
+html {
+  overflow-x: hidden;
 }
 
-.border-active {
-  border-color: #c7a28b;
-}
-.border-inactive {
-  border-color: rgb(255, 250, 247);
+body {
+  background: rgb(255, 250, 247);
+  overflow-x: hidden;
 }

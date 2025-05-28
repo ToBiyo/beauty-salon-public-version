@@ -10,12 +10,12 @@ export const ActiveLink = ({
 }) => {
   const isActive = href === path;
 
-  const active = isActive ? "border-active" : "border-inactive";
+  const active = isActive ? "bg-cream" : "bg-none";
 
   return (
     <Link
       href={href}
-      className={`text-lg py-2 border-b-[4px] ${isActive} ? ${active}`}
+      className={`text-lg p-3 rounded-xl hover:bg-cream  duration-200  ${isActive} ? ${active}`}
     >
       {text}
     </Link>

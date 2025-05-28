@@ -2,22 +2,26 @@ import Image from "next/image";
 import me from "../../public/assets/images/me.png";
 import logo from "../../public/assets/images/logo-black.png";
 import { TwoColumnsLayout } from "./TwoColumnsLayout";
+import { Heading } from "./Heading";
+import { Text } from "./Text";
 
 export const Presentation = () => {
   return (
     <TwoColumnsLayout>
       <>
-        <div className="absolute h-full w-3/6 bg-cream -z-20 rounded-s-2xl" />
+        <div className="absolute h-full lg:w-3/6 bg-cream -z-20 lg:rounded-s-2xl w-[70%] rounded-2xl" />
         <Image
           src={me}
           alt={"titolare F Beautique"}
           width={0}
-          className="h-[100%] w-[auto]"
+          className="lg:w-[100%] w-[60%]"
         />
       </>
-      <>
-        <h2 className="font-playfair text-6xl italic text-cyan-700">Titolo</h2>
-        <p className="font-quicksand text-lg mt-16 mb-8">
+      <div className="flex flex-col gap-20">
+        <Heading main={false} color="cyan-700">
+          Titolo
+        </Heading>
+        <Text>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
           dicta fugit corrupti laborum earum laboriosam non nam sunt, iste natus
           nisi rem. Officia impedit magni consequatur repellat labore laudantium
@@ -28,14 +32,14 @@ export const Presentation = () => {
           Possimus dicta fugit corrupti laborum earum laboriosam non nam sunt,
           iste natus nisi rem. Officia impedit magni consequatur repellat labore
           laudantium id.
-        </p>
+        </Text>
 
         <Image src={logo} width={200} alt="logo" />
 
-        <button className="bg-cyan-700 rounded-lg text-gray-50 mt-16 p-4 max-w-40 flex items-center justify-center">
+        <button className="bg-cyan-700 rounded-lg text-gray-50  p-4 max-w-40 flex items-center justify-center">
           See more
         </button>
-      </>
+      </div>
     </TwoColumnsLayout>
   );
 };

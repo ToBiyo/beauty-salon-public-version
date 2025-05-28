@@ -6,12 +6,14 @@ import { Reviews } from "@/components/Reviews";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center gap-[300px]">
+    <main className=" flex flex-col items-center ">
       <Hero />
-      <Services />
-      <Presentation />
-      <Contatti />
-      <Reviews />
+      <div className="relative z-20 bg-avorio flex flex-col items-center gap-[300px]">
+        <Services />
+        <Presentation />
+        <Contatti />
+        <Reviews />
+      </div>
     </main>
   );
 }

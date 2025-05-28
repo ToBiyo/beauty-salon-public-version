@@ -1,4 +1,6 @@
 import React from "react";
+import { Heading } from "./Heading";
+import { Text } from "./Text";
 
 export const DetailedText = ({
   title,
@@ -13,11 +15,11 @@ export const DetailedText = ({
 }) => {
   return (
     <div className="flex flex-col  justify-center gap-10 w-full">
-      <h2 className={`font-playfair text-6xl italic text-${color}`}>{title}</h2>
-      <p className="font-quicksand text-lg mt-16 mb-8">{firstParagraph}</p>
-      {secondParagraph && (
-        <p className="font-quicksand text-lg  mb-8">{secondParagraph}</p>
-      )}
+      <Heading main={false} color={color}>
+        {title}
+      </Heading>
+      <Text>{firstParagraph}</Text>
+      {secondParagraph && <Text>{secondParagraph}</Text>}
 
       <div className="flex gap-10">
         <button
