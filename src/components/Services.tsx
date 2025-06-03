@@ -38,7 +38,7 @@ export const Services = () => {
   return (
     <section className="flex flex-col mx-auto gap-28 w-[80vw]">
       <div className="flex flex-col gap-10">
-        <Heading main={false} color="cyan-700">
+        <Heading main={false} textColor="text-cyan-700">
           I Nostri Servizi
         </Heading>
         <SubHeading textColor="text-gray-500">

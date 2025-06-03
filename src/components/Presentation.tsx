@@ -19,7 +19,7 @@ export const Presentation = () => {
           />
         </>
         <div className="flex flex-col gap-20">
-          <Heading main={false} color="cyan-700">
+          <Heading main={false} textColor="text-cyan-700">
             Titolo
           </Heading>
           <Text>

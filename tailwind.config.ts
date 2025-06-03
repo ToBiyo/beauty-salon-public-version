@@ -10,10 +10,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        tortora: "rgba(206,161,124,1)",
-        cream: "rgba(233, 201, 168, 0.50)",
-        blue: "rgb(198,211,226)",
-        avorio: "rgb(250,242,238)",
+        tortora: "rgba(206,161,124)",
+        cream: "rgb(223, 191, 163)",
+        blue: "rgb(253, 248, 243)",
+        avorio: "rgb(252, 248, 237)",
       },
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
@@ -28,3 +28,5 @@ const config: Config = {
   plugins: [],
 };
 export default config;
+
+/*  */

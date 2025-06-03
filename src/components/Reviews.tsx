@@ -41,10 +41,12 @@ export const Reviews: React.FC = () => {
     <section className=" w-[80vw] mx-auto grid grid-rows-[1fr_auto] gap-8 ">
       {/* First Row */}
       <div className="flex flex-col justify-center h-full mb gap-10">
-        <Heading main={false} color="tortora">
+        <Heading main={false} textColor="text-tortora">
           Reviews
         </Heading>
-        <SubHeading textColor="txt-gray-800">What our customers say</SubHeading>
+        <SubHeading textColor="text-gray-500">
+          What our customers say
+        </SubHeading>
       </div>
 
       {/* Second Row */}
