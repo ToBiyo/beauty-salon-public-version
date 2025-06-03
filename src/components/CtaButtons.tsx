@@ -1,14 +1,15 @@
-import React from "react";
-
-export const CtaButtons = () => {
+import { Button } from "./Button";
+export const CtaButtons = ({
+  callMessage,
+  callPhone,
+}: {
+  callMessage: string;
+  callPhone: string;
+}) => {
   return (
     <div className="flex gap-8">
-      <button className="py-3 px-8 text-white text-lg bg-cyan-700 rounded-lg">
-        Call
-      </button>
-      <button className="py-3 px-8 text-white text-lg bg-cyan-700 rounded-lg">
-        Text
-      </button>
+      <Button>{callPhone}</Button>
+      <Button>{callMessage}</Button>
     </div>
   );
 };

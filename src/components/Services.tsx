@@ -36,12 +36,12 @@ const services: ServiceData[] = [
 
 export const Services = () => {
   return (
-    <section className="flex flex-col mx-auto xl:max-w-[1440px] gap-28 w-[80vw]">
+    <section className="flex flex-col mx-auto gap-28 w-[80vw]">
       <div className="flex flex-col gap-10">
         <Heading main={false} color="cyan-700">
           I Nostri Servizi
         </Heading>
-        <SubHeading>
+        <SubHeading textColor="text-gray-500">
           Lorem ipsum dolor sit amet consectetur adipisicing elit
         </SubHeading>
       </div>

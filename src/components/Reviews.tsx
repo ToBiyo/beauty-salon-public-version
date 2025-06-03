@@ -38,13 +38,13 @@ const reviews: Review[] = [
 
 export const Reviews: React.FC = () => {
   return (
-    <section className="xl:max-w-[1440px] pb-[300px] w-[80vw] mx-auto grid grid-rows-[1fr_auto] gap-8 ">
+    <section className=" w-[80vw] mx-auto grid grid-rows-[1fr_auto] gap-8 ">
       {/* First Row */}
       <div className="flex flex-col justify-center h-full mb gap-10">
         <Heading main={false} color="tortora">
           Reviews
         </Heading>
-        <SubHeading>What our customers say</SubHeading>
+        <SubHeading textColor="txt-gray-800">What our customers say</SubHeading>
       </div>
 
       {/* Second Row */}
@@ -53,18 +53,6 @@ export const Reviews: React.FC = () => {
           return <ReviewCard reviewData={review} key={index} />;
         })}
       </div>
-      <CallToAction>
-        <>
-          <Heading main={false} color="cyan-700">
-            Lorem ipsum dolor sit amet consectetur
-          </Heading>
-          <SubHeading>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-            neque ad enim a illo facilis ea reprehenderit deleniti doloremque
-            minima
-          </SubHeading>
-        </>
-      </CallToAction>
     </section>
   );
 };

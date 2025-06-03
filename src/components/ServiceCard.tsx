@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ServiceData } from "@/lib/types/types";
+import { CardTitle } from "./CardTitle";
+import { CardDescriptionText } from "./CardDescriptionText";
 
 export const ServiceCard = ({ data }: { data: ServiceData }) => {
   const { title, description, image } = data;
@@ -13,11 +15,11 @@ export const ServiceCard = ({ data }: { data: ServiceData }) => {
         alt="servizio 4"
         className="w-full  shadow-gray-800 drop-shadow-xl rounded-xl overflow-hidden"
       />
-      <h2 className="font-playfair text-3xl text-tortora italic">{title}</h2>
-      <p className="font-quicksand text-gray-800">{description}</p>
+      <CardTitle textColor="text-tortora">{title}</CardTitle>
+      <CardDescriptionText>{description}</CardDescriptionText>
       <Link
         href={"/servizi"}
-        className="bg-cyan-700 text-gray-50  max-w-32 py-3 flex items-center justify-center rounded-lg"
+        className="bg-cyan-700 text-gray-50  max-w-40 py-3 flex items-center justify-center rounded-lg text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 hover:bg-cyan-600  duration-300"
       >
         See more
       </Link>
