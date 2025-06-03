@@ -6,16 +6,18 @@ export const DetailedText = ({
   title,
   firstParagraph,
   secondParagraph,
-  color,
+  bgColor,
+  textColor,
 }: {
   title: string;
   firstParagraph: string;
   secondParagraph: string;
-  color: string;
+  bgColor: string;
+  textColor: string;
 }) => {
   return (
     <div className="flex flex-col  justify-center gap-10 w-full">
-      <Heading main={false} color={color}>
+      <Heading main={false} textColor={textColor}>
         {title}
       </Heading>
       <Text>{firstParagraph}</Text>
@@ -23,12 +25,12 @@ export const DetailedText = ({
 
       <div className="flex gap-10">
         <button
-          className={`min-w-32 py-3 bg-${color} text-gray-100 rounded-xl text-lg font-quicksand`}
+          className={`min-w-32 py-3 ${bgColor} text-gray-100 rounded-xl text-lg font-quicksand`}
         >
           Whatsapp
         </button>
         <button
-          className={`min-w-32 py-3 bg-${color} text-gray-100 rounded-xl text-lg font-quicksand`}
+          className={`min-w-32 py-3 ${bgColor} text-gray-100 rounded-xl text-lg font-quicksand`}
         >
           Whatsapp
         </button>

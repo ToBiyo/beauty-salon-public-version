@@ -51,7 +51,8 @@ export default function page() {
           title={sampleText.title}
           firstParagraph={sampleText.firstParagraph}
           secondParagraph={sampleText.secondParagraph}
-          color="tortora"
+          textColor="text-tortora"
+          bgColor="bg-tortora"
         />
       </TwoColumnsLayout>
       <TwoColumnsLayout>
@@ -59,7 +60,8 @@ export default function page() {
           title={sampleText.title}
           firstParagraph={sampleText.firstParagraph}
           secondParagraph={sampleText.secondParagraph}
-          color="cyan-700"
+          textColor="text-cyan-700"
+          bgColor="bg-cyan-700"
         />
         <TwoImagesLayout
           main={visoMain}
@@ -77,7 +79,8 @@ export default function page() {
           title={sampleText.title}
           firstParagraph={sampleText.firstParagraph}
           secondParagraph={sampleText.secondParagraph}
-          color="tortora"
+          textColor="text-tortora"
+          bgColor="bg-tortora"
         />
       </TwoColumnsLayout>
       <TwoColumnsLayout>
@@ -85,7 +88,8 @@ export default function page() {
           title={sampleText.title}
           firstParagraph={sampleText.firstParagraph}
           secondParagraph={sampleText.secondParagraph}
-          color="cyan-700"
+          textColor="text-cyan-700"
+          bgColor="bg-cyan-700"
         />
         <TwoImagesLayout
           main={esteticaMain}
