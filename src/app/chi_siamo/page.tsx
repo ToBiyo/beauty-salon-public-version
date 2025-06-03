@@ -69,7 +69,8 @@ export default function page() {
           title={sampleText.title}
           firstParagraph={sampleText.firstParagraph}
           secondParagraph={sampleText.secondParagraph}
-          color="cyan-700"
+          textColor="text-cyan-700"
+          bgColor="bg-cyan-700"
         />
       </TwoColumnsLayout>
       <TwoColumnsLayout>
@@ -77,7 +78,8 @@ export default function page() {
           title={sampleText.title}
           firstParagraph={sampleText.firstParagraph}
           secondParagraph={sampleText.secondParagraph}
-          color="tortora"
+          textColor="text-tortora"
+          bgColor="bg-tortora"
         />
         <ThreeImagesLayout main={hero} second={hero} third={hero} />
       </TwoColumnsLayout>
@@ -87,7 +89,8 @@ export default function page() {
           title={sampleText.title}
           firstParagraph={sampleText.firstParagraph}
           secondParagraph={sampleText.secondParagraph}
-          color="cyan-700"
+          textColor="text-cyan-700"
+          bgColor="bg-cyan-700"
         />
       </TwoColumnsLayout>
     </main>
