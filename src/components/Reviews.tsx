@@ -41,7 +41,7 @@ export const Reviews: React.FC = () => {
     <section className=" w-[80vw] mx-auto grid grid-rows-[1fr_auto] gap-8 ">
       {/* First Row */}
       <div className="flex flex-col justify-center h-full mb gap-10">
-        <Heading main={false} textColor="text-tortora">
+        <Heading main={false} textColor="text-accent">
           Reviews
         </Heading>
         <SubHeading textColor="text-gray-500">

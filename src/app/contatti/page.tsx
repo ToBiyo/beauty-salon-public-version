@@ -14,7 +14,7 @@ export default function page() {
   return (
     <div className="flex flex-col items-center justify-center">
       <Hero />
-      <div className="realtive z-20 bg-avorio flex flex-col gap-[300px]">
+      <div className="realtive z-20 bg-beige flex flex-col gap-[300px]">
         <TwoColumnsLayout>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3093.7252971253206!2d8.610957877307477!3d39.158229231269736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e70582d9c88301%3A0x4564050ed35c87c6!2sVia%20Nazionale%2C%2041%2C%2009010%20Perdaxius%20SU!5e0!3m2!1sit!2sit!4v1747669731279!5m2!1sit!2sit"

@@ -19,7 +19,7 @@ export const Presentation = () => {
           />
         </>
         <div className="flex flex-col gap-20">
-          <Heading main={false} textColor="text-cyan-700">
+          <Heading main={false} textColor="text-sectionBg">
             Titolo
           </Heading>
           <Text>
@@ -39,7 +39,7 @@ export const Presentation = () => {
 
           <Link
             href={"/chi_siamo"}
-            className="bg-cyan-700 text-gray-50  max-w-40 py-3 flex items-center justify-center rounded-lg text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 hover:bg-cyan-600  duration-300"
+            className="bg-sectionBg text-gray-50  max-w-40 py-3 flex items-center justify-center rounded-3xl text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 hover:text-accent  duration-300"
           >
             See more
           </Link>
