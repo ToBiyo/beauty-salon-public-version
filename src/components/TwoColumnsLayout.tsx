@@ -2,16 +2,23 @@ import React from "react";
 
 export const TwoColumnsLayout = ({
   children,
+  width,
 }: {
   children: [React.ReactNode, React.ReactNode];
+  width?: string;
 }) => {
   const [left, right] = React.Children.toArray(children);
+
+  const containerWidth = width || "w-[80vw]";
+
   return (
-    <section className="flex items-center min-h-[auto]  justify-between  w-[80vw] mx-auto relative  flex-col lg:flex-row">
-      <div className="lg:w-[45%] w-[80vw] h-full relative rounded-xl flex  lg:justify-start">
+    <section
+      className={`grid h-[auto] ${containerWidth} mx-auto relative grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-0`}
+    >
+      <div className="h-auto relative rounded-xl flex  lg:justify-start">
         {left}
       </div>
-      <div className="flex flex-col lg:w-[45%] w-[80vw]  h-full">{right}</div>
+      <div className="flex  justify-end">{right}</div>
     </section>
   );
 };

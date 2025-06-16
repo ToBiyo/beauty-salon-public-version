@@ -1,11 +1,29 @@
 import React from "react";
-import { CtaButtons } from "./CtaButtons";
-
-export const CallToAction = ({ children }: { children: React.ReactNode }) => {
+import { WhatsAppButton } from "./WhatsappButton";
+import { CallButton } from "./CallButton";
+import { CTAheading } from "./CTAheading";
+export const CallToAction = ({
+  children,
+  textColor,
+  buttonBgColor,
+  buttonTextColor,
+}: {
+  children: React.ReactNode;
+  textColor: string;
+  buttonBgColor: string;
+  buttonTextColor: string;
+}) => {
   return (
-    <div className="flex flex-col items-center gap-10 text-center mx-auto  max-w-[60vw]">
-      {children}
-      <CtaButtons callMessage="Text Now" callPhone="Call now" />
+    <div className="flex w-[60vw] flex-col items-center gap-28 text-center relative">
+      <CTAheading textColor={textColor}>{children}</CTAheading>
+      <div className="flex gap-8">
+        <WhatsAppButton bgColor={buttonBgColor} textColor={buttonTextColor}>
+          Contattaci subito
+        </WhatsAppButton>
+        <CallButton bgColor={buttonBgColor} textColor={buttonTextColor}>
+          Chiama subito
+        </CallButton>
+      </div>
     </div>
   );
 };

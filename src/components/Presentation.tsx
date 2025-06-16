@@ -1,48 +1,42 @@
 import Link from "next/link";
-import { TwoColumnsLayout } from "./TwoColumnsLayout";
 import { Heading } from "./Heading";
+import { SubHeading } from "./SubHeading";
 import { Text } from "./Text";
 import Image from "next/image";
+import { TwoColumnsLayout } from "./TwoColumnsLayout";
 import me from "../../public/assets/images/presentation.png";
-import logo from "../../public/assets/images/logo-black.png";
 
 export const Presentation = () => {
   return (
-    <div className="w-[100vw]">
+    <div className="w-[100vw] h-[auto] flex flex-col items-center justify-center bg-gradient-to-r from-sectionBg via-sectionBg/80 to-accent py-60">
       <TwoColumnsLayout>
-        <>
-          <Image
-            src={me}
-            alt={"titolare F Beautique"}
-            width={0}
-            className="lg:w-[100%] w-[60%] rounded-2xl shadow-lg"
-          />
-        </>
-        <div className="flex flex-col gap-20">
-          <Heading main={false} textColor="text-sectionBg">
-            Titolo
+        <div className="flex flex-col gap-10  justify-center">
+          <Heading textColor="text-secondaryAccent" main={false}>
+            Lorem ipsum
           </Heading>
-          <Text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-            dicta fugit corrupti laborum earum laboriosam non nam sunt, iste
-            natus nisi rem. Officia impedit magni consequatur repellat labore
-            laudantium id. Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Possimus dicta fugit corrupti laborum earum laboriosam non nam
-            sunt, iste natus nisi rem. Officia impedit magni consequatur
-            repellat labore laudantium id. id. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Possimus dicta fugit corrupti laborum
-            earum laboriosam non nam sunt, iste natus nisi rem. Officia impedit
-            magni consequatur repellat labore laudantium id.
+          <SubHeading textColor="text-gray-100">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </SubHeading>
+          <Text textColor="text-gray-100">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Consectetur ipsa, quisquam odio quibusdam suscipit enim molestias
+            vitae error esse vel nulla, est dolores excepturi quia eveniet,
+            dignissimos accusamus inventore nisi.
           </Text>
-
-          <Image src={logo} width={200} alt="logo" />
-
           <Link
             href={"/chi_siamo"}
-            className="bg-sectionBg text-gray-50  max-w-40 py-3 flex items-center justify-center rounded-3xl text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 hover:text-accent  duration-300"
+            className={`bg-secondaryAccent text-gray-50  max-w-40 py-3 flex items-center justify-center rounded-3xl text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8  hover:bg-accent duration-300`}
           >
-            See more
+            Scopri
           </Link>
+        </div>
+
+        <div className=" flex items-end justify-end rounded-2xl">
+          <Image
+            src={me}
+            alt="me"
+            className="rounded-2xl w-[100%] shadow-2xl shadow-gray-800"
+          ></Image>
         </div>
       </TwoColumnsLayout>
     </div>

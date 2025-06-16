@@ -8,7 +8,7 @@ export const Footer = () => {
   return (
     <footer className=" min-h-[auto] bg-sectionBg flex flex-col justify-center items-center relative bottom-0 z-20 py-20">
       <div className="mx-auto flex lg:flex-row flex-col w-[80vw] lg:items-start items-center justify-between   gap-20">
-        <div className="flex flex-col max-w-[50%] gap-10">
+        <div className="flex flex-col max-w-[40%] gap-10">
           <Image
             src={logo}
             alt="Logo"
@@ -45,7 +45,7 @@ export const Footer = () => {
         </div>
         <div className="flex flex-col items-center xl:items-start">
           <h3 className="text-4xl font-playfair italic text-accent">Contact</h3>
-          <div className="flex flex-col gap-4 mt-7 items-center xl:items-start">
+          <div className="flex flex-col gap-10 mt-7 items-center xl:items-start">
             <div className="flex gap-2 items-center duration-300 text-gray-100 cursor-pointer hover:text-accent">
               <ImPhone className=" text-3xl" />
               <p className="text-lg font-quicksand text-gray-100">

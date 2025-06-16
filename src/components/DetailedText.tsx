@@ -11,7 +11,7 @@ export const DetailedText = ({
 }: {
   title: string;
   firstParagraph: string;
-  secondParagraph: string;
+  secondParagraph: string | undefined;
   bgColor: string;
   textColor: string;
 }) => {
@@ -20,21 +20,10 @@ export const DetailedText = ({
       <Heading main={false} textColor={textColor}>
         {title}
       </Heading>
-      <Text>{firstParagraph}</Text>
-      {secondParagraph && <Text>{secondParagraph}</Text>}
-
-      <div className="flex gap-10">
-        <button
-          className={`min-w-32 py-3 ${bgColor} text-gray-100 rounded-xl text-lg font-quicksand`}
-        >
-          Whatsapp
-        </button>
-        <button
-          className={`min-w-32 py-3 ${bgColor} text-gray-100 rounded-xl text-lg font-quicksand`}
-        >
-          Whatsapp
-        </button>
-      </div>
+      <Text textColor="text-sectionBg">{firstParagraph}</Text>
+      {secondParagraph && (
+        <Text textColor="text-sectionBg">{secondParagraph}</Text>
+      )}
     </div>
   );
 };

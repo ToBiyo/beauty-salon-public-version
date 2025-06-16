@@ -10,7 +10,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        secondaryAccent: "#B8856B",
         sectionBg: "#4B5563",
+        grayBackground: "#f7f7f7",
         accent: "#D8C9B5",
         background: "#F9FBFD",
       },
@@ -30,15 +32,16 @@ export default config;
 
 //palette 2
 /* 
-        
-        sectionBg: "#7B6E67",
-        accent: "#C9A28D",
-        background: "#F7F3EF",
+        secondaryAccent: #205B4F
+        sectionBg: "#D9E8E5",
+        accent: "#CEA892",
+        background: "#FFFFFF",
 
 */
 //palette 1
 /* 
       
+       secondaryAccent: "#8B9A8C",
         sectionBg: "#4B5563",
         accent: "#D8C9B5",
         background: "#F9FBFD",

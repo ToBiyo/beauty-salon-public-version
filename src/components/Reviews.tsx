@@ -38,19 +38,19 @@ const reviews: Review[] = [
 
 export const Reviews: React.FC = () => {
   return (
-    <section className=" w-[80vw] mx-auto grid grid-rows-[1fr_auto] gap-8 ">
+    <section className="w-[100vw] h-auto flex flex-col justify-center items-center bg-gradient-to-b from-sectionBg via-sectionBg/80 to-accent py-60">
       {/* First Row */}
-      <div className="flex flex-col justify-center h-full mb gap-10">
-        <Heading main={false} textColor="text-accent">
+      <div className="w-[80vw] flex flex-col justify-center gap-10">
+        <Heading main={false} textColor="text-secondaryAccent">
           Reviews
         </Heading>
-        <SubHeading textColor="text-gray-500">
+        <SubHeading textColor="text-gray-100">
           What our customers say
         </SubHeading>
       </div>
 
       {/* Second Row */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 mt-12 mb-28">
+      <div className="w-[80vw] grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-32 mt-12 mb-28 justify-between">
         {reviews.map((review, index) => {
           return <ReviewCard reviewData={review} key={index} />;
         })}

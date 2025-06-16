@@ -36,16 +36,16 @@ const services: ServiceData[] = [
 
 export const Services = () => {
   return (
-    <section className="flex flex-col mx-auto gap-28 w-[80vw]">
+    <section className="flex flex-col justify-center mx-auto gap-28 w-[80vw] h-[auto] py-60">
       <div className="flex flex-col gap-10">
-        <Heading main={false} textColor="text-accent">
+        <Heading main={false} textColor="text-secondaryAccent">
           I Nostri Servizi
         </Heading>
         <SubHeading textColor="text-gray-500">
           Lorem ipsum dolor sit amet consectetur adipisicing elit
         </SubHeading>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 mb-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-5 xl:gap-10 mb-10">
         {services.map((service, index) => {
           return <ServiceCard data={service} key={index} />;
         })}

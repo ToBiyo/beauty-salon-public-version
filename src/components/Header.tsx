@@ -6,7 +6,7 @@ import logo from "../../public/assets/images/logo-black.png";
 
 export default function Header() {
   return (
-    <header className="w-full h-[100px] relative flex ">
+    <header className="w-full relative flex ">
       <div className="fixed z-30 bg-background  w-full h-[100px]">
         <div className="flex flex-row items-center justify-between mx-auto  h-full  w-[80vw]">
           <Link href={"/"} className="outline-none">
