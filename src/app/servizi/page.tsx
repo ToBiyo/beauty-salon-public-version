@@ -4,17 +4,8 @@ import { WhatsAppButton } from "@/components/WhatsappButton";
 import { CallButton } from "@/components/CallButton";
 import Image from "next/image";
 import { Text } from "@/components/Text";
-import { Hero } from "@/components/Hero";
 import hero from "../../../public/assets/images/hero3.jpg";
 import viso from "../../../public/assets/images/viso.jpg";
-
-const sampleText = {
-  title: "Lorem ipsum",
-  firstParagraph:
-    " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore obcaecati magni necessitatibus sequi, expedita odit ullam mollitia architecto rerum fugit neque perspiciatis quam quis distinctio odio nulla repellendus? Corporis, minima? Dolore obcaecati magni necessitatibus sequi, expedita odit ullam mollitia architecto rerum fugit neque perspiciatis quam quis distinctio odio nulla repellendus? Corporis, minima?",
-  secondParagraph:
-    " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore obcaecati magni necessitatibus sequi, expedita odit ullam mollitia architecto rerum fugit neque perspiciatis quam quis distinctio odio nulla repellendus? Corporis, minima? Dolore obcaecati magni necessitatibus sequi, expedita odit ullam mollitia architecto rerum fugit neque perspiciatis quam quis distinctio odio nulla repellendus? Corporis, minima?",
-};
 
 export default function page() {
   return (
@@ -53,7 +44,7 @@ export default function page() {
         <div className="grid grid-cols-2 w-[80vw] gap-8">
           <div className="w-full flex flex-col gap-20">
             <div className="p-8 bg-secondaryAccent/60 drop-shadow-2xl shadow-gray-700">
-              <Image src={viso} alt="me" className="w-[100%] z-20 " />
+              <Image src={viso} alt="me" className="w-full object-cove z-20 " />
             </div>
           </div>
           <div className="flex flex-col justify-center gap-20 pl-20">
@@ -108,7 +99,7 @@ export default function page() {
           </div>
           <div className="w-full flex flex-col gap-20  items-end">
             <div className="bg-mainBg w-auto p-8 ">
-              <Image src={viso} alt="me" className="w-[100%] z-20" />
+              <Image src={viso} alt="me" className="w-full object-cover z-20" />
             </div>
           </div>
         </div>
@@ -119,7 +110,11 @@ export default function page() {
           <div className="w-full flex flex-col gap-20 rounded-3xl p-10">
             <div className="w-full flex flex-col gap-20">
               <div className="p-8 bg-secondaryAccent/60 drop-shadow-2xl shadow-gray-700">
-                <Image src={viso} alt="me" className="w-[100%] z-20 " />
+                <Image
+                  src={viso}
+                  alt="me"
+                  className="w-full object-cove z-20 "
+                />
               </div>
             </div>
           </div>
@@ -175,7 +170,7 @@ export default function page() {
           </div>
           <div className="w-full flex flex-col gap-20  items-end">
             <div className="bg-mainBg w-auto p-8 ">
-              <Image src={viso} alt="me" className="w-[100%] z-20" />
+              <Image src={viso} alt="me" className="w-full object-cove z-20" />
             </div>
           </div>
         </div>

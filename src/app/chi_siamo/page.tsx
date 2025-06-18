@@ -21,14 +21,6 @@ import spazio1 from "../../../public/assets/images/spazio1.jpg";
 import spazio2 from "../../../public/assets/images/spazio2.jpg";
 import { CallButton } from "@/components/CallButton";
 
-const sampleText = {
-  title: "Lorem ipsum",
-  firstParagraph:
-    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore obcaecati magni necessitatibus sequi, expedita odit ullam mollitia architecto rerum fugit neque perspiciatis quam quis distinctio odio nulla repellendus? Corporis, minima? ",
-  secondParagraph:
-    " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore obcaecati magni necessitatibus sequi, expedita odit ullam mollitia architecto rerum fugit neque perspiciatis quam quis distinctio odio nulla repellendus? Corporis, minima? ",
-};
-
 export default function page() {
   return (
     <main className="flex flex-col items-center bg-background relative">
@@ -39,7 +31,9 @@ export default function page() {
               <Image
                 src={hero}
                 alt="Hero Image"
-                className="w-[100%] object-contain"
+                className="w-[100%]"
+                width={200}
+                height={100}
               />
             </div>
           </div>
@@ -70,7 +64,8 @@ export default function page() {
               <Image
                 src={me}
                 alt={"titolare F Beautique"}
-                width={250}
+                width={200}
+                height={100}
                 className=" w-[60%]"
               />
             </div>
