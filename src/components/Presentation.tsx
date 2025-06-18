@@ -8,8 +8,8 @@ import me from "../../public/assets/images/about-section.png";
 
 export const Presentation = () => {
   return (
-    <section className="w-[100vw]  bg-secondaryBg relative h-[auto] md:h-[60vh] xl:h-[80vh] flex items-center justify-center py-4">
-      <div className="w-[90vw] lg:w-[80vw] h-full flex flex-col md:flex-row   jutify-center gap-10">
+    <section className="w-full  bg-secondaryBg relative h-[auto] md:h-[60vh] xl:h-[80%] flex items-center justify-center py-4">
+      <div className="w-[90%] lg:w-[80%] h-full flex flex-col md:flex-row   jutify-center gap-10">
         <div className="md:w-1/2 w-full h-auto  p-0 lg:pr-5 flex items-center justify-center lg:justify-start  ">
           <div className="w-full bg-mainBg p-8">
             <Image

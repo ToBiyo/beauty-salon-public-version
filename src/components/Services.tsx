@@ -37,7 +37,7 @@ export const Services = () => {
       id="services"
       className="w-full bg-mainBg flex flex-col items-center justify-center relative py-52 gap-28"
     >
-      <div className="w-[80vw] flex flex-col gap-28">
+      <div className="w-[80%] flex flex-col gap-28">
         <div className="flex flex-col  gap-12 items-center text-center">
           <Heading textColor="text-gray-700" main={true}>
             I Nostri Servizi

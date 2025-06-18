@@ -10,8 +10,8 @@ import viso from "../../../public/assets/images/viso.jpg";
 export default function page() {
   return (
     <main className="w-[full] flex flex-col items-center bg-background justify-center">
-      <section className="w-[100vw]  bg-secondaryBg relative h-[auto] md:h-[60vh] xl:h-[80vh] flex items-center justify-center py-4">
-        <div className="sm:w-[90vw] lg:w-[80vw] h-full flex flex-col md:flex-row   jutify-center">
+      <section className="w-full  bg-secondaryBg relative h-[auto] md:h-[60vh] xl:h-[80%] flex items-center justify-center py-4">
+        <div className="sm:w-[90%] lg:w-[80%] h-full flex flex-col md:flex-row   jutify-center">
           <div className="md:w-1/2 w-full h-auto p-5 flex items-center  justify-end lg:justify-center  md:order-2">
             <div className="w-full bg-mainBg p-8">
               <Image
@@ -40,8 +40,8 @@ export default function page() {
           </div>
         </div>
       </section>
-      <section className="w-[100vw] bg-mainBackground py-40 flex justify-center">
-        <div className="grid grid-cols-2 w-[80vw] gap-8">
+      <section className="w-full bg-mainBackground py-40 flex justify-center">
+        <div className="grid grid-cols-2 w-[80%] gap-8">
           <div className="w-full flex flex-col gap-20">
             <div className="p-8 bg-secondaryAccent/60 drop-shadow-2xl shadow-gray-700">
               <Image
@@ -80,7 +80,7 @@ export default function page() {
         </div>
       </section>
       <section className="w-full  py-40 flex justify-center bg-secondaryBg">
-        <div className="grid grid-cols-2 w-[80vw]">
+        <div className="grid grid-cols-2 w-[80%]">
           <div className="flex flex-col justify-center gap-20 pr-20">
             <Heading textColor="text-gray-700" main={false}>
               Lorem ipsum
@@ -114,7 +114,7 @@ export default function page() {
       </section>
 
       <section className="w-full bg-grayBackground py-40 flex justify-center">
-        <div className="grid grid-cols-2 w-[80vw]">
+        <div className="grid grid-cols-2 w-[80%]">
           <div className="w-full flex flex-col gap-20 rounded-3xl p-10">
             <div className="w-full flex flex-col gap-20">
               <div className="p-8 bg-secondaryAccent/60 drop-shadow-2xl shadow-gray-700">
@@ -155,7 +155,7 @@ export default function page() {
         </div>
       </section>
       <section className="w-full  py-40 flex justify-center bg-secondaryBg">
-        <div className="grid grid-cols-2 w-[80vw]">
+        <div className="grid grid-cols-2 w-[80%]">
           <div className="flex flex-col justify-center gap-20 pr-20">
             <Heading textColor="text-gray-700" main={false}>
               Lorem ipsum

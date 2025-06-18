@@ -9,8 +9,8 @@ import { Reviews } from "@/components/Reviews";
 export default function Home() {
   return (
     <main className="flex flex-col items-center bg-mainBg ">
-      <section className="w-[100vw]  bg-secondaryBg relative h-[auto] md:h-[60vh] xl:h-[80vh] flex items-center justify-center py-4">
-        <div className="sm:w-[90vw] lg:w-[80vw] h-full flex flex-col md:flex-row   jutify-center ">
+      <section className="w-full  bg-secondaryBg relative h-[auto] md:h-[60%] xl:h-[80%] flex items-center justify-center py-4">
+        <div className="sm:w-[90%] lg:w-[80%] h-full flex flex-col md:flex-row   jutify-center ">
           <div className="md:w-1/2 w-full flex flex-col md:items-start md:text-left justify-center gap-10 relative md:order-1 order-2 items-center text-center pr-8 xl:pr-32">
             <Heading textColor="text-gray-700" main={true}>
               Dove la bellezza incontra il benessere

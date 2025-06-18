@@ -38,7 +38,7 @@ const reviews: Review[] = [
 export const Reviews = () => {
   return (
     <section className="w-full py-40 px-4 bg-stone-50">
-      <div className="w-[80vw] mx-auto">
+      <div className="w-[80%] mx-auto">
         {/* Header */}
         <div className="flex flex-col text-center mb-20 gap-12">
           <Heading textColor="text-gray-800" main={false}>

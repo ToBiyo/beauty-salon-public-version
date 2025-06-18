@@ -24,8 +24,8 @@ import { CallButton } from "@/components/CallButton";
 export default function page() {
   return (
     <main className="flex flex-col items-center bg-background relative">
-      <section className="w-[100vw]  bg-secondaryAccent/40 relative h-[auto] md:h-[60vh] xl:h-[80vh] flex items-center justify-center py-4">
-        <div className="sm:w-[90vw] lg:w-[80vw] h-full flex flex-col md:flex-row   jutify-center">
+      <section className="w-full  bg-secondaryAccent/40 relative h-[auto] md:h-[60vh] xl:h-[80vh] flex items-center justify-center py-4">
+        <div className="sm:w-[90%] lg:w-[80%] h-full flex flex-col md:flex-row   jutify-center">
           <div className="md:w-1/2 w-full h-auto p-5 flex items-center  justify-end lg:justify-center  ">
             <div className="w-full bg-mainBg p-8">
               <Image
@@ -57,7 +57,7 @@ export default function page() {
         </div>
       </section>
 
-      <div className="w-[100vw] h-[auto] py-40 bg-grayBackground flex justify-center items-center relative">
+      <div className="w-full h-[auto] py-40 bg-grayBackground flex justify-center items-center relative">
         <TwoColumnsLayout>
           <div className="p-5 g rounded-full">
             <div className=" flex items-center justify-center 2xl:w-[650px] 2xl:h-[650px] xl:w-[500px] xl:h-[500px] w-[400px] h-[400px] rounded-full bg-secondaryBg drop-shadow-2xl shadow-gray-900">
@@ -78,7 +78,7 @@ export default function page() {
           />
         </TwoColumnsLayout>
       </div>
-      <div className="w-[100vw] h-auto py-20 flex justify-center items-center bg-secondaryAccent/40">
+      <div className="w-full h-auto py-20 flex justify-center items-center bg-secondaryAccent/40">
         <TwoColumnsLayout>
           <div className="flex flex-col gap-10 justify-center">
             <DetailedText
@@ -112,8 +112,8 @@ export default function page() {
         </TwoColumnsLayout>
       </div>
 
-      <section className="w-[100vw] minh-[100vh] bg-grayBackground py-60 flex flex-col items-center justify-between gap-28">
-        <div className="w-[80vw]">
+      <section className="w-full minh-[100vh] bg-grayBackground py-60 flex flex-col items-center justify-between gap-28">
+        <div className="w-[80%]">
           <div className="text-center flex flex-col gap-20 mb-20">
             <Heading main={false} textColor="text-gray-700">
               La mia linea di prodotti
@@ -156,7 +156,7 @@ export default function page() {
           </div>
         </div>
       </section>
-      <div className="w-[100vw] h-[100vh] flex justify-center items-center bg-secondaryAccent/40">
+      <div className="w-full py-52 flex justify-center items-center bg-secondaryAccent/40">
         <TwoColumnsLayout>
           <div className="bg-grayBackground p-10 rounded-2xl overflow-hidden">
             <ThreeImagesLayout

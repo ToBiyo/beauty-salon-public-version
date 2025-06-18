@@ -12,14 +12,14 @@ import {
 
 export const Contatti = () => {
   return (
-    <section className="w-[100vw] h-[auto] bg-none flex flex-col items-center justify-center py-40 gap-28 relative bg-secondaryBg">
+    <section className="w-full h-[auto] bg-none flex flex-col items-center justify-center py-40 gap-28 relative bg-secondaryBg">
       <div className="relative z-20">
         <Heading main={false} textColor="text-secondaryAccent">
           Dove e quando trovarci
         </Heading>
       </div>
 
-      <div className="max-w-[90vw] min-h-[30vh] flex flex-col lg:flex-row gap-24 lg:gap-10 justify-center items-center  lg:justify-between p-10 bg-secondaryBg">
+      <div className="max-w-[90%] min-h-[30vh] flex flex-col lg:flex-row gap-24 lg:gap-10 justify-center items-center  lg:justify-between p-10 bg-secondaryBg">
         <div className="w-full lg:w-1/2 flex flex-col items-center justify-center h-full text-center ">
           <div className="flex  gap-4">
             <ImCalendar className="text-secondaryAccent text-5xl" />
