@@ -116,20 +116,7 @@ export default function page() {
           </div>
         </TwoColumnsLayout>
       </div>
-      {/* <section className="w-full bg-sectionBg flex flex-col items-center justify-center text-center py-40 gap-20">
-        <h2 className="text-accent font-playfair text-5xl block w-[60%]">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod maxime
-          obcaecati mollitia eligendi vitae consectetur?
-        </h2>
-        <div className="flex gap-6">
-          <CallButton bgColor="bg-accent" textColor="text-gray-100">
-            Prenota ora
-          </CallButton>
-          <WhatsAppButton bgColor="bg-accent" textColor="text-gray-100">
-            Prenota subito
-          </WhatsAppButton>
-        </div>
-      </section> */}
+
       <section className="w-[100vw] minh-[100vh] bg-grayBackground py-60 flex flex-col items-center justify-between gap-28">
         <div className="w-[80vw]">
           <div className="text-center flex flex-col gap-20 mb-20">
