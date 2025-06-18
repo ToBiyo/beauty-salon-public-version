@@ -24,7 +24,7 @@ const config: Config = {
       },
       screens: {
         ...defaultTheme.screens,
-        md: "821",
+        md: "821px",
       },
     },
   },
