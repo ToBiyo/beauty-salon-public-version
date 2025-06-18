@@ -15,7 +15,7 @@ export const Presentation = () => {
             <Image
               src={me}
               alt="Hero Image"
-              className="w-full object-contain"
+              className="w-full object-fill relative"
             />
           </div>
         </div>

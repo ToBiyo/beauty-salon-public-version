@@ -17,7 +17,7 @@ export default function page() {
               <Image
                 src={hero}
                 alt="Hero Image"
-                className="w-[100%] object-contain"
+                className="w-[100%] object-fill"
               />
             </div>
           </div>
@@ -40,11 +40,15 @@ export default function page() {
           </div>
         </div>
       </section>
-      <section className="w-full bg-grayBackground py-40 flex justify-center">
+      <section className="w-[100vw] bg-mainBackground py-40 flex justify-center">
         <div className="grid grid-cols-2 w-[80vw] gap-8">
           <div className="w-full flex flex-col gap-20">
             <div className="p-8 bg-secondaryAccent/60 drop-shadow-2xl shadow-gray-700">
-              <Image src={viso} alt="me" className="w-full object-cove z-20 " />
+              <Image
+                src={viso}
+                alt="me"
+                className="w-full object-fill z-20 relative"
+              />
             </div>
           </div>
           <div className="flex flex-col justify-center gap-20 pl-20">
@@ -99,7 +103,11 @@ export default function page() {
           </div>
           <div className="w-full flex flex-col gap-20  items-end">
             <div className="bg-mainBg w-auto p-8 ">
-              <Image src={viso} alt="me" className="w-full object-cover z-20" />
+              <Image
+                src={viso}
+                alt="me"
+                className="w-full object-fill z-20 relative"
+              />
             </div>
           </div>
         </div>
@@ -113,7 +121,7 @@ export default function page() {
                 <Image
                   src={viso}
                   alt="me"
-                  className="w-full object-cove z-20 "
+                  className="w-full object-fill z-20 relative"
                 />
               </div>
             </div>
@@ -170,7 +178,11 @@ export default function page() {
           </div>
           <div className="w-full flex flex-col gap-20  items-end">
             <div className="bg-mainBg w-auto p-8 ">
-              <Image src={viso} alt="me" className="w-full object-cove z-20" />
+              <Image
+                src={viso}
+                alt="me"
+                className="w-full object-fill z-20 relative"
+              />
             </div>
           </div>
         </div>
