@@ -13,12 +13,12 @@ export const TwoColumnsLayout = ({
 
   return (
     <section
-      className={`grid h-[auto] ${containerWidth} mx-auto relative grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-0`}
+      className={`grid h-[auto] ${containerWidth} mx-auto relative gap-20 grid-cols-1 lg:grid-cols-2`}
     >
-      <div className="h-auto relative rounded-xl flex  lg:justify-start">
+      <div className="w-auto h-auto relative rounded-xl flex  lg:justify-start mr-20">
         {left}
       </div>
-      <div className="flex  justify-end">{right}</div>
+      <div className="w-auto flex  justify-end">{right}</div>
     </section>
   );
 };

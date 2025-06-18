@@ -1,4 +1,3 @@
-import { CallToAction } from "./CallToAction";
 import { Review } from "@/lib/types/types";
 import { ReviewCard } from "./ReviewCard";
 import { Heading } from "./Heading";
@@ -36,24 +35,34 @@ const reviews: Review[] = [
   },
 ];
 
-export const Reviews: React.FC = () => {
+export const Reviews = () => {
   return (
-    <section className="w-[100vw] h-auto flex flex-col justify-center items-center bg-gradient-to-b from-sectionBg via-sectionBg/80 to-accent py-60">
-      {/* First Row */}
-      <div className="w-[80vw] flex flex-col justify-center gap-10">
-        <Heading main={false} textColor="text-secondaryAccent">
-          Reviews
-        </Heading>
-        <SubHeading textColor="text-gray-100">
-          What our customers say
-        </SubHeading>
-      </div>
+    <section className="w-full py-40 px-4 bg-stone-50">
+      <div className="w-[80vw] mx-auto">
+        {/* Header */}
+        <div className="flex flex-col text-center mb-20 gap-12">
+          <Heading textColor="text-gray-800" main={false}>
+            Cosa Dicono di Noi
+          </Heading>
+          <SubHeading textColor="text-gray-600">
+            La soddisfazione delle nostre clienti è la nostra più grande
+            ricompensa. Scopri le esperienze di chi ha già scelto F Beautyque.
+          </SubHeading>
+        </div>
 
-      {/* Second Row */}
-      <div className="w-[80vw] grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-32 mt-12 mb-28 justify-between">
-        {reviews.map((review, index) => {
-          return <ReviewCard reviewData={review} key={index} />;
-        })}
+        {/* Reviews Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+          {reviews.map((review, index) => (
+            <ReviewCard key={index} reviewData={review} index={index} />
+          ))}
+        </div>
+
+        {/* CTA Button */}
+        <div className="text-center mt-20">
+          <button className="bg-gray-800 text-white px-8 py-3 rounded-full font-medium text-sm hover:bg-stone-700 transition-colors">
+            Prenota il Tuo Trattamento
+          </button>
+        </div>
       </div>
     </section>
   );

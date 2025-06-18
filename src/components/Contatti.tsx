@@ -1,53 +1,72 @@
 import { Heading } from "./Heading";
-import { TwoColumnsLayout } from "./TwoColumnsLayout";
 import { Text } from "./Text";
-import { ImLocation, ImPhone, ImWhatsapp } from "react-icons/im";
-import { CallButton } from "./CallButton";
-import { WhatsAppButton } from "./WhatsappButton";
+import {
+  ImCalendar,
+  ImLocation,
+  ImPhone,
+  ImWhatsapp,
+  ImClock,
+  ImCross,
+  ImAddressBook,
+} from "react-icons/im";
 
 export const Contatti = () => {
   return (
-    <section className="w-[100vw] h-[auto] bg-[url(../../public/assets/images/bg.jpg)] bg-cover bg-fixed ">
-      <div className="flex flex-col justify-center items-center w-full h-full bg-grayBackground gap-20 bg-opacity-80 py-60">
-        <div className=" w-[80vw] mb-10 flex flex-col items-center text-center gap-12">
-          <Heading main={false} textColor="text-sectionBg">
-            Dove e quando trovarci
-          </Heading>
-        </div>
-        <TwoColumnsLayout width="2xl:w-[50vw] lg:w-[60vw]">
-          <div className="w-full flex flex-col text-center">
-            <h3 className="font-playfair italic text-2xl sm:text-3xl xl:text-5xl text-sectionBg mb-8">
+    <section className="w-[100vw] h-[auto] bg-none flex flex-col items-center justify-center py-40 gap-28 relative bg-secondaryBg">
+      <div className="relative z-20">
+        <Heading main={false} textColor="text-secondaryAccent">
+          Dove e quando trovarci
+        </Heading>
+      </div>
+
+      <div className="max-w-[90vw] min-h-[30vh] flex flex-col lg:flex-row gap-24 lg:gap-10 justify-center items-center  lg:justify-between p-10 bg-secondaryBg">
+        <div className="w-full lg:w-1/2 flex flex-col items-center justify-center h-full text-center ">
+          <div className="flex  gap-4">
+            <ImCalendar className="text-secondaryAccent text-5xl" />
+            <h3 className="font-playfair text-5xl text-sectionBg mb-8">
               Orari
             </h3>
+          </div>
 
-            <div className="flex flex-col mt-6 gap-12 text-sectionBg">
+          <div className="flex flex-col mt-6 gap-5 text-sectionBg items-center">
+            <div className="flex gap-2 items-center ">
+              <ImClock className="text-secondaryAccent text-xl" />
               <Text textColor="text-black">Lunedì/Venerdì : 09:00 - 19:00</Text>
+            </div>
+            <div className="flex gap-2 items-center ">
+              <ImClock className="text-secondaryAccent text-xl" />
               <Text textColor="text-black">Sabato : 09:00 - 13:00</Text>
+            </div>
+            <div className="flex gap-2 items-center ">
+              <ImCross className="text-secondaryAccent text-xl" />
               <Text textColor="text-black">Domenica : Chiuso</Text>
             </div>
           </div>
-          <div className="flex flex-col pb-4 text-center ">
-            <h3 className="font-playfair italic  text-2xl sm:text-3xl xl:text-5xl text-sectionBg mb-8">
+        </div>
+        <div className="w-full lg:w-1/2 flex flex-col items-center">
+          <div className="flex  gap-4">
+            <ImAddressBook className="text-secondaryAccent text-5xl" />
+            <h3 className="font-playfair text-5xl text-gray-700 mb-8">
               Contatti
             </h3>
-            <div className="flex flex-col mt-6 gap-12 text-sectionBg items-center">
-              <div className="flex gap-2 items-center ">
-                <ImLocation className="text-secondaryAccent text-xl" />
-                <Text textColor="text-black">
-                  Via Nazionale, 41b, Perdaxius, (SU), Sardegna
-                </Text>
-              </div>
-              <div className="flex gap-2 items-center">
-                <ImPhone className="text-secondaryAccent text-xl" />
-                <Text textColor="text-black">+39 3473976763</Text>
-              </div>
-              <div className="flex gap-2 items-center">
-                <ImWhatsapp className="text-secondaryAccent text-xl" />
-                <Text textColor="text-black">+39 3473976763</Text>
-              </div>
+          </div>
+          <div className="flex flex-col mt-6 gap-5 text-sectionBg items-center">
+            <div className="flex gap-2 items-center ">
+              <ImLocation className="text-secondaryAccent text-xl" />
+              <Text textColor="text-gray-700">
+                Via Nazionale, 41b, Perdaxius, (SU), Sardegna
+              </Text>
+            </div>
+            <div className="flex gap-2 items-center">
+              <ImPhone className="text-secondaryAccent text-xl" />
+              <Text textColor="text-gray-700">+39 3473976763</Text>
+            </div>
+            <div className="flex gap-2 items-center">
+              <ImWhatsapp className="text-secondaryAccent text-xl" />
+              <Text textColor="text-gray-700">+39 3473976763</Text>
             </div>
           </div>
-        </TwoColumnsLayout>
+        </div>
       </div>
     </section>
   );

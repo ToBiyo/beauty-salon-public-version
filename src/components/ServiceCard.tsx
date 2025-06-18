@@ -1,37 +1,71 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { ServiceData } from "@/lib/types/types";
 import { CardTitle } from "./CardTitle";
 import { CardDescriptionText } from "./CardDescriptionText";
 
-export const ServiceCard = ({ data }: { data: ServiceData }) => {
+export const ServiceCard = ({
+  data,
+  index,
+}: {
+  data: ServiceData;
+  index: number;
+}) => {
   const { title, description, image } = data;
 
+  let imageOrder = "";
+  let textOrder = "";
+
+  switch (index) {
+    case 0:
+      imageOrder = "order-1";
+      textOrder = "order-2";
+      break;
+    case 1:
+      imageOrder = " md:order-2 2xl:order-1";
+      textOrder = "2xl:order-2";
+      break;
+    case 2:
+      imageOrder = "2xl:order-2";
+      textOrder = "2xl:order-1";
+      break;
+    case 3:
+      imageOrder = " md:order-2 2xl:order-2";
+      textOrder = "2xl:order-1";
+      break;
+  }
+
+  let background = index % 2 === 0 ? "bg-secondaryAccent/50 " : "bg-gray-800 ";
+  let textColor = index % 2 === 0 ? "text-gray-800" : "text-gray-100";
+  let titleColor = index % 2 === 0 ? "text-gray-800" : "text-secondaryAccent";
+  let buttonBg = index % 2 === 0 ? "bg-gray-800" : "bg-secondaryAccent";
+
   return (
-    <article
-      className={`flex flex-col w-[full] rounded-3xl overflow-hidden gap-y-8 bg-grayBackground pb-4 drop-shadow-2xl relative`}
-    >
+    <article className="flex flex-col md:flex-row items-center gap-4">
       <Image
         src={image}
-        width={200}
-        alt="servizio 4"
-        className="w-full overflow-hidden  border-b-2 border-secondaryAccent"
+        alt={title}
+        className={`w-full md:w-1/2 ${imageOrder}`}
       />
-      <div className=" flex flex-col p-4 gap-8 ">
-        <div>
-          <CardTitle textColor={"text-secondaryAccent"}>{title}</CardTitle>
-          <div className={`h-[2px] w-[60px] ${"text-sectionBg"} mt-1`}></div>
-        </div>
-        <CardDescriptionText textColor={"text-sectionBg"}>
+      <div
+        className={`w-full h-full md:w-1/2 ${background} ${textOrder} flex flex-col items-center justify-center gap-5 p-10 text-center`}
+      >
+        <CardTitle textColor={titleColor}>{title}</CardTitle>
+        <CardDescriptionText textColor={textColor}>
           {description}
         </CardDescriptionText>
-        <Link
-          href={"/servizi"}
-          className={`bg-secondaryAccent text-gray-50  max-w-40 py-3 flex items-center justify-center rounded-3xl text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8  hover:bg-accent duration-300`}
-        >
-          See more
-        </Link>
+        <div className="flex flex-row items-center gap-6">
+          <button
+            className={`font-quicksand text-md rounded-3xl py-2 px-4 ${buttonBg} text-white transition-all duration-300 hover:scale-105`}
+          >
+            Chiama
+          </button>
+          <button
+            className={`font-quicksand text-md rounded-3xl py-2 px-4 ${buttonBg} text-white transition-all duration-300 hover:scale-105`}
+          >
+            Scrivici
+          </button>
+        </div>
       </div>
     </article>
   );

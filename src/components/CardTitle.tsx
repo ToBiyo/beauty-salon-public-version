@@ -9,7 +9,7 @@ export const CardTitle = ({
 }) => {
   return (
     <h3
-      className={`font-playfair ${textColor} italic text-lg sm:text-xl md:text-2xl lg:text-3xl`}
+      className={`font-playfair ${textColor} text-lg sm:text-xl md:text-2xl lg:text-3xl pb-1]`}
     >
       {children}
     </h3>

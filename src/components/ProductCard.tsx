@@ -8,7 +8,7 @@ export default function ProductCard({ src }: { src: StaticImageData }) {
 
   return (
     <div
-      className=" bg-sectionBg flex items-center justify-center rounded-2xl p-5 relative cursor-pointer overflow-hidden"
+      className=" bg-gray-700 flex items-center justify-center  p-5 relative cursor-pointer overflow-hidden"
       onMouseEnter={() => {
         setTimeout(() => {
           setIsHover((prev) => !prev);
@@ -19,7 +19,7 @@ export default function ProductCard({ src }: { src: StaticImageData }) {
       }}
     >
       <div
-        className="absolute w-full h-full bg-sectionBg bg-opacity-90 text-slate-100 p-10 flex flex-col items-center justify-center text-center gap-10 duration-200"
+        className="absolute w-full h-full bg-gray-700 bg-opacity-90 text-slate-100 p-10 flex flex-col items-center justify-center text-center gap-10 duration-200"
         style={{ opacity: isHover ? 1 : 0 }}
       >
         <h3 className="font-playfair text-accent text-2xl">Lorem ipsum</h3>

@@ -9,7 +9,7 @@ export const Text = ({
 }) => {
   return (
     <p
-      className={`text-sm ${textColor} sm:text-base md:text-lg lg:text-xl xl:text-2xl font-quicksand leading-relaxed md:leading-loose`}
+      className={`text-base md:text:lg xl:text-2xl font-quicksand  leading-loose ${textColor}`}
     >
       {children}
     </p>

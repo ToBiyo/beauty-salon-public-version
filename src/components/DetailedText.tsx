@@ -6,13 +6,11 @@ export const DetailedText = ({
   title,
   firstParagraph,
   secondParagraph,
-  bgColor,
   textColor,
 }: {
   title: string;
   firstParagraph: string;
   secondParagraph: string | undefined;
-  bgColor: string;
   textColor: string;
 }) => {
   return (
@@ -20,9 +18,9 @@ export const DetailedText = ({
       <Heading main={false} textColor={textColor}>
         {title}
       </Heading>
-      <Text textColor="text-sectionBg">{firstParagraph}</Text>
+      <Text textColor="text-gray-600">{firstParagraph}</Text>
       {secondParagraph && (
-        <Text textColor="text-sectionBg">{secondParagraph}</Text>
+        <Text textColor="text-gray-600">{secondParagraph}</Text>
       )}
     </div>
   );

@@ -6,8 +6,8 @@ import logo from "../../public/assets/images/logo-black.png";
 
 export default function Header() {
   return (
-    <header className="w-full relative flex ">
-      <div className="fixed z-30 bg-background  w-full h-[100px]">
+    <header className="w-full relative flex mb-[80px]">
+      <div className="fixed z-30 w-full h-[80px] bg-mainBg">
         <div className="flex flex-row items-center justify-between mx-auto  h-full  w-[80vw]">
           <Link href={"/"} className="outline-none">
             <Image

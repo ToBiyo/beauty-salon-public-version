@@ -19,39 +19,44 @@ const sampleText = {
 export default function page() {
   return (
     <main className="w-[full] flex flex-col items-center bg-background justify-center">
-      <Hero background={hero}>
-        <div className="h-full w-[40%] mx-[10%] flex flex-col justify-center gap-12">
-          <Heading textColor="text-secondaryAccent" main={true}>
-            Dove la bellezza incontra il benessere
-          </Heading>
-          <SubHeading textColor="text-gray-200">
-            Rigenera corpo e mente con trattamenti estetici su misura. Prenota
-            subito il tuo trattamento personalizzato.
-          </SubHeading>
+      <section className="w-[100vw]  bg-secondaryBg relative h-[auto] md:h-[60vh] xl:h-[80vh] flex items-center justify-center py-4">
+        <div className="sm:w-[90vw] lg:w-[80vw] h-full flex flex-col md:flex-row   jutify-center">
+          <div className="md:w-1/2 w-full h-auto p-5 flex items-center  justify-end lg:justify-center  md:order-2">
+            <div className="w-full bg-mainBg p-8">
+              <Image
+                src={hero}
+                alt="Hero Image"
+                className="w-[100%] object-contain"
+              />
+            </div>
+          </div>
+          <div className="md:w-1/2 w-full flex flex-col md:items-start md:text-left justify-center gap-10 relative items-center text-center pr-8 xl:pr-32">
+            <Heading textColor="text-gray-700" main={true}>
+              Il tuo centro benessere, pensato per te
+            </Heading>
+            <SubHeading textColor="text-gray-500">
+              Uno spazio in cui poterti fermare, respirare e ritrovare il tuo
+              equilibrio. Ogni trattamento nasce dall’ascolto, ogni percorso è
+              modellato su di te.
+            </SubHeading>
 
-          <div className="flex gap-8">
-            <WhatsAppButton
-              bgColor="bg-secondaryAccent"
-              textColor="text-gray-100"
+            <a
+              href="#services"
+              className="bg-gray-700 px-5 py-3 text-white rounded-3xl front-quicksand text-sm sm:text-base md:text-base lg:text-lg"
             >
-              Scrivici
-            </WhatsAppButton>
-            <CallButton bgColor="bg-secondaryAccent" textColor="text-gray-100">
-              Chiama
-            </CallButton>
+              Scopri di più
+            </a>
           </div>
         </div>
-      </Hero>
+      </section>
       <section className="w-full bg-grayBackground py-40 flex justify-center">
-        <div className="grid grid-cols-2 w-[80vw]">
-          <div className="w-full flex flex-col gap-20 rounded-3xl p-10">
-            <Image
-              src={viso}
-              alt="me"
-              className="w-[90%] z-20 shadow-2xl rounded-3xl"
-            />
+        <div className="grid grid-cols-2 w-[80vw] gap-8">
+          <div className="w-full flex flex-col gap-20">
+            <div className="p-8 bg-secondaryAccent/60 drop-shadow-2xl shadow-gray-700">
+              <Image src={viso} alt="me" className="w-[100%] z-20 " />
+            </div>
           </div>
-          <div className="flex flex-col justify-center gap-20">
+          <div className="flex flex-col justify-center gap-20 pl-20">
             <Heading textColor="text-secondaryAccent" main={false}>
               Consulenza
             </Heading>
@@ -79,13 +84,13 @@ export default function page() {
           </div>
         </div>
       </section>
-      <section className="w-full  py-40 flex justify-center">
+      <section className="w-full  py-40 flex justify-center bg-secondaryBg">
         <div className="grid grid-cols-2 w-[80vw]">
-          <div className="flex flex-col justify-center gap-20">
-            <Heading textColor="text-sectionBg" main={false}>
+          <div className="flex flex-col justify-center gap-20 pr-20">
+            <Heading textColor="text-gray-700" main={false}>
               Lorem ipsum
             </Heading>
-            <Text textColor="text-sectionBg">
+            <Text textColor="text-gray-600">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Consectetur ipsa, quisquam odio quibusdam suscipit enim molestias
               vitae error esse vel nulla, est dolores excepturi quia eveniet,
@@ -93,47 +98,32 @@ export default function page() {
               consectetur, adipisicing elit.
             </Text>
             <div className="flex gap-6">
-              <CallButton bgColor="bg-sectionBg" textColor="text-gray-100">
+              <CallButton bgColor="bg-gray-700" textColor="text-gray-100">
                 Prenota ora
               </CallButton>
-              <WhatsAppButton bgColor="bg-sectionBg" textColor="text-gray-100">
+              <WhatsAppButton bgColor="bg-gray-700" textColor="text-gray-100">
                 Prenota subito
               </WhatsAppButton>
             </div>
           </div>
-          <div className="w-full flex flex-col gap-20 rounded-3xl items-end">
-            <Image
-              src={viso}
-              alt="me"
-              className="w-[80%] z-20 shadow-2xl rounded-3xl"
-            />
+          <div className="w-full flex flex-col gap-20  items-end">
+            <div className="bg-mainBg w-auto p-8 ">
+              <Image src={viso} alt="me" className="w-[100%] z-20" />
+            </div>
           </div>
         </div>
       </section>
-      <section className="w-full bg-sectionBg flex flex-col items-center justify-center text-center py-40 gap-20">
-        <h2 className="text-accent font-playfair text-5xl block w-[60%]">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod maxime
-          obcaecati mollitia eligendi vitae consectetur?
-        </h2>
-        <div className="flex gap-6">
-          <CallButton bgColor="bg-accent" textColor="text-gray-100">
-            Prenota ora
-          </CallButton>
-          <WhatsAppButton bgColor="bg-accent" textColor="text-gray-100">
-            Prenota subito
-          </WhatsAppButton>
-        </div>
-      </section>
+
       <section className="w-full bg-grayBackground py-40 flex justify-center">
         <div className="grid grid-cols-2 w-[80vw]">
           <div className="w-full flex flex-col gap-20 rounded-3xl p-10">
-            <Image
-              src={viso}
-              alt="me"
-              className="w-[90%] z-20 shadow-2xl rounded-3xl"
-            />
+            <div className="w-full flex flex-col gap-20">
+              <div className="p-8 bg-secondaryAccent/60 drop-shadow-2xl shadow-gray-700">
+                <Image src={viso} alt="me" className="w-[100%] z-20 " />
+              </div>
+            </div>
           </div>
-          <div className="flex flex-col justify-center gap-20">
+          <div className="flex flex-col justify-center gap-20 pl-20">
             <Heading textColor="text-secondaryAccent" main={false}>
               Consulenza
             </Heading>
@@ -161,13 +151,13 @@ export default function page() {
           </div>
         </div>
       </section>
-      <section className="w-full  py-40 flex justify-center">
+      <section className="w-full  py-40 flex justify-center bg-secondaryBg">
         <div className="grid grid-cols-2 w-[80vw]">
-          <div className="flex flex-col justify-center gap-20">
-            <Heading textColor="text-sectionBg" main={false}>
+          <div className="flex flex-col justify-center gap-20 pr-20">
+            <Heading textColor="text-gray-700" main={false}>
               Lorem ipsum
             </Heading>
-            <Text textColor="text-sectionBg">
+            <Text textColor="text-gray-600">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Consectetur ipsa, quisquam odio quibusdam suscipit enim molestias
               vitae error esse vel nulla, est dolores excepturi quia eveniet,
@@ -175,20 +165,18 @@ export default function page() {
               consectetur, adipisicing elit.
             </Text>
             <div className="flex gap-6">
-              <CallButton bgColor="bg-sectionBg" textColor="text-gray-100">
+              <CallButton bgColor="bg-gray-700" textColor="text-gray-100">
                 Prenota ora
               </CallButton>
-              <WhatsAppButton bgColor="bg-sectionBg" textColor="text-gray-100">
+              <WhatsAppButton bgColor="bg-gray-700" textColor="text-gray-100">
                 Prenota subito
               </WhatsAppButton>
             </div>
           </div>
-          <div className="w-full flex flex-col gap-20 rounded-3xl items-end">
-            <Image
-              src={viso}
-              alt="me"
-              className="w-[80%] z-20 shadow-2xl rounded-3xl"
-            />
+          <div className="w-full flex flex-col gap-20  items-end">
+            <div className="bg-mainBg w-auto p-8 ">
+              <Image src={viso} alt="me" className="w-[100%] z-20" />
+            </div>
           </div>
         </div>
       </section>

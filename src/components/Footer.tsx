@@ -6,7 +6,7 @@ import { ImPhone, ImWhatsapp, ImLocation } from "react-icons/im";
 
 export const Footer = () => {
   return (
-    <footer className=" min-h-[auto] bg-sectionBg flex flex-col justify-center items-center relative bottom-0 z-20 py-20">
+    <footer className=" min-h-[auto] bg-gray-800 flex flex-col justify-center items-center relative bottom-0 z-20 py-20 ">
       <div className="mx-auto flex lg:flex-row flex-col w-[80vw] lg:items-start items-center justify-between   gap-20">
         <div className="flex flex-col max-w-[40%] gap-10">
           <Image
@@ -23,7 +23,9 @@ export const Footer = () => {
           </h3>
         </div>
         <div className="flex flex-col gap-10 items-center xl:items-start">
-          <h3 className="text-4xl font-playfair italic text-accent">Socials</h3>
+          <h3 className="text-4xl font-playfair italic text-mainAccent">
+            Socials
+          </h3>
           <div>
             <div className="w- full flex flex-row gap-8 xl:items-start items-center duration-300">
               <a
@@ -44,7 +46,9 @@ export const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col items-center xl:items-start">
-          <h3 className="text-4xl font-playfair italic text-accent">Contact</h3>
+          <h3 className="text-4xl font-playfair italic text-mainAccent">
+            Contact
+          </h3>
           <div className="flex flex-col gap-10 mt-7 items-center xl:items-start">
             <div className="flex gap-2 items-center duration-300 text-gray-100 cursor-pointer hover:text-accent">
               <ImPhone className=" text-3xl" />

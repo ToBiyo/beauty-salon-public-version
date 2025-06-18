@@ -3,42 +3,46 @@ import { Heading } from "./Heading";
 import { SubHeading } from "./SubHeading";
 import { Text } from "./Text";
 import Image from "next/image";
-import { TwoColumnsLayout } from "./TwoColumnsLayout";
-import me from "../../public/assets/images/presentation.png";
+
+import me from "../../public/assets/images/about-section.png";
 
 export const Presentation = () => {
   return (
-    <div className="w-[100vw] h-[auto] flex flex-col items-center justify-center bg-gradient-to-r from-sectionBg via-sectionBg/80 to-accent py-60">
-      <TwoColumnsLayout>
-        <div className="flex flex-col gap-10  justify-center">
-          <Heading textColor="text-secondaryAccent" main={false}>
-            Lorem ipsum
+    <section className="w-[100vw]  bg-secondaryBg relative h-[auto] md:h-[60vh] xl:h-[80vh] flex items-center justify-center py-4">
+      <div className="w-[90vw] lg:w-[80vw] h-full flex flex-col md:flex-row   jutify-center gap-10">
+        <div className="md:w-1/2 w-full h-auto  p-0 lg:pr-5 flex items-center justify-center lg:justify-start  ">
+          <div className="w-full bg-mainBg p-8">
+            <Image
+              src={me}
+              alt="Hero Image"
+              className="w-full object-contain"
+            />
+          </div>
+        </div>
+        <div className="md:w-1/2 w-full flex flex-col md:items-start md:text-left justify-center gap-5 lg:gap-10 relative  items-center text-center pr-2">
+          <Heading textColor="text-gray-800" main={false}>
+            F Beautyque
           </Heading>
-          <SubHeading textColor="text-gray-100">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          <SubHeading textColor="text-gray-600">
+            Un trattamento pensato solo per te
           </SubHeading>
-          <Text textColor="text-gray-100">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Consectetur ipsa, quisquam odio quibusdam suscipit enim molestias
-            vitae error esse vel nulla, est dolores excepturi quia eveniet,
-            dignissimos accusamus inventore nisi.
+          <Text textColor="text-gray-800">
+            Mi chiamo Francesca e ho creato questo centro con l’obiettivo di
+            offrire qualcosa di diverso: un luogo dove prendersi davvero cura di
+            sé, con attenzione, ascolto e professionalità. Credo che ogni
+            persona meriti un approccio unico, perché ogni corpo ha esigenze e
+            ritmi propri. Per questo, ogni trattamento che propongo nasce da un
+            dialogo e da una visione personalizzata, in un ambiente sereno e
+            curato in ogni dettaglio.
           </Text>
           <Link
             href={"/chi_siamo"}
-            className={`bg-secondaryAccent text-gray-50  max-w-40 py-3 flex items-center justify-center rounded-3xl text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8  hover:bg-accent duration-300`}
+            className={`bg-gray-800 text-gray-50  max-w-40 py-3 flex items-center justify-center rounded-3xl text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8  hover:bg-accent duration-300`}
           >
             Scopri
           </Link>
         </div>
-
-        <div className=" flex items-end justify-end rounded-2xl">
-          <Image
-            src={me}
-            alt="me"
-            className="rounded-2xl w-[100%] shadow-2xl shadow-gray-800"
-          ></Image>
-        </div>
-      </TwoColumnsLayout>
-    </div>
+      </div>
+    </section>
   );
 };

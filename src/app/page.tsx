@@ -1,59 +1,51 @@
-import { Hero } from "@/components/Hero";
-import { Presentation } from "@/components/Presentation";
 import { Services } from "@/components/Services";
-import { Contatti } from "@/components/Contatti";
-import { Reviews } from "@/components/Reviews";
 import { Heading } from "@/components/Heading";
 import { SubHeading } from "@/components/SubHeading";
-import { WhatsAppButton } from "@/components/WhatsappButton";
-import { CallButton } from "@/components/CallButton";
-import backgroundImage from "../../public/assets/images/new.png";
-
+import { Presentation } from "@/components/Presentation";
+import { Contatti } from "@/components/Contatti";
+import Image from "next/image";
+import hero from "../../public/assets/images/half-hero.png";
+import { Reviews } from "@/components/Reviews";
 export default function Home() {
   return (
-    <main className="flex flex-col items-center bg-background">
-      <Hero background={backgroundImage}>
-        <div className="h-full  sm:w-[60%] lg:w-[40%] mx-[10%] flex flex-col justify-center gap-16">
-          <Heading textColor="text-secondaryAccent" main={true}>
-            Dove la bellezza incontra il benessere
-          </Heading>
-          <SubHeading textColor="text-gray-200">
-            Rigenera corpo e mente con trattamenti estetici su misura. Prenota
-            subito il tuo trattamento personalizzato.
-          </SubHeading>
+    <main className="flex flex-col items-center bg-mainBg ">
+      <section className="w-[100vw]  bg-secondaryBg relative h-[auto] md:h-[60vh] xl:h-[80vh] flex items-center justify-center py-4">
+        <div className="sm:w-[90vw] lg:w-[80vw] h-full flex flex-col md:flex-row   jutify-center ">
+          <div className="md:w-1/2 w-full flex flex-col md:items-start md:text-left justify-center gap-10 relative md:order-1 order-2 items-center text-center pr-8 xl:pr-32">
+            <Heading textColor="text-gray-700" main={true}>
+              Dove la bellezza incontra il benessere
+            </Heading>
+            <SubHeading textColor="text-gray-500">
+              Ogni persona è unica, e così deve essere ogni trattamento. Ritrova
+              l’equilibrio tra corpo e mente con percorsi su misura, pensati per
+              esaltare la tua naturale bellezza.
+            </SubHeading>
 
-          <div className="flex gap-8">
-            <WhatsAppButton
-              bgColor="bg-secondaryAccent"
-              textColor="text-gray-100"
+            <a
+              href="#services"
+              className="bg-gray-700 px-5 py-3 text-white rounded-3xl front-quicksand text-sm sm:text-base md:text-base lg:text-lg"
             >
-              Scrivici
-            </WhatsAppButton>
-            <CallButton bgColor="bg-secondaryAccent" textColor="text-gray-100">
-              Chiama
-            </CallButton>
+              Scopri di più
+            </a>
+          </div>
+
+          <div className="md:w-1/2 w-full h-auto p-5 flex items-center  justify-end lg:justify-center md:order-2 order-1 ">
+            <div className="w-full bg-mainBg p-8">
+              <Image
+                src={hero}
+                alt="Hero Image"
+                className="w-[100%] object-contain"
+              />
+            </div>
           </div>
         </div>
-      </Hero>
-
+      </section>
       <Services />
       <Presentation />
-      <section className="w-[80vw] flex flex-col items-center justify-center text-center py-40 gap-20">
-        <h2 className="text-sectionBg font-playfair text-4xl block w-[60%]">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod maxime
-          obcaecati mollitia eligendi vitae consectetur?
-        </h2>
-        <div className="flex gap-6">
-          <CallButton bgColor="bg-sectionBg" textColor="text-gray-100">
-            Prenota ora
-          </CallButton>
-          <WhatsAppButton bgColor="bg-sectionBg" textColor="text-gray-100">
-            Prenota subito
-          </WhatsAppButton>
-        </div>
-      </section>
       <Reviews />
       <Contatti />
     </main>
   );
 }
+
+/* */

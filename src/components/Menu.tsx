@@ -12,9 +12,9 @@ export const Menu = () => {
   const visibility = isVisible ? "flex" : "hidden";
 
   return (
-    <nav className="flex flex-row">
+    <nav className="flex flex-row ">
       <div
-        className={`lg:flex  lg:flex-row lg:relative lg:top-0 lg:py-0 gap-6 justify-center  items-center font-quicksand font-medium ${visibility} flex-col fixed top-[100px] bg-background  py-5 left-0  w-full`}
+        className={`lg:flex  lg:flex-row lg:relative lg:top-0 lg:py-0 gap-6 justify-center  items-center font-quicksand font-medium ${visibility} flex-col fixed top-[80px] bg-mainBg   py-5 left-0  w-full`}
         onClick={() => setIsVisible(!isVisible)}
       >
         <ActiveLink href="/" path={path} text={"Home"}></ActiveLink>

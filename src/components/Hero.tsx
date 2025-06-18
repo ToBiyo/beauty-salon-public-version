@@ -21,9 +21,7 @@ export const Hero = ({
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-black/60 to-accent/60">
-        {children}
-      </div>
+      <div className="absolute inset-0 bg-gray-900/65">{children}</div>
     </section>
   );
 };
