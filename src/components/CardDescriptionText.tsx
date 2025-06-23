@@ -8,7 +8,9 @@ export const CardDescriptionText = ({
   textColor: string;
 }) => {
   return (
-    <p className={`font-quicksand ${textColor} text-md leading-relaxed`}>
+    <p
+      className={`font-quicksand ${textColor} text-sm leading-relaxed xl:text-base`}
+    >
       {children}
     </p>
   );

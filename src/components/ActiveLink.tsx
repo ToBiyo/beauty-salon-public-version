@@ -12,7 +12,7 @@ export const ActiveLink = ({
 
   const active = isActive
     ? "bg-secondaryBg text-slate-600"
-    : "bg-mainBg text-slate-600";
+    : "bg-white text-slate-600";
 
   return (
     <Link

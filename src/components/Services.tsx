@@ -3,6 +3,7 @@ import { ServiceCard } from "./ServiceCard";
 import { ServiceData } from "@/lib/types/types";
 import { SubHeading } from "./SubHeading";
 import { Heading } from "./Heading";
+import { Wrapper } from "./Wrapper";
 
 const services: ServiceData[] = [
   {
@@ -35,25 +36,26 @@ export const Services = () => {
   return (
     <section
       id="services"
-      className="w-full bg-mainBg flex flex-col items-center justify-center relative py-52 gap-28"
+      className="w-full bg-white flex justify-center py-10 md:py-20 lg:py-32"
     >
-      <div className="w-[80%] flex flex-col gap-28">
-        <div className="flex flex-col  gap-12 items-center text-center">
-          <Heading textColor="text-gray-700" main={true}>
-            I Nostri Servizi
-          </Heading>
-          <SubHeading textColor="text-gray-500">
-            Ogni persona è unica, e così deve essere ogni trattamento. Ritrova
-            l’equilibrio tra corpo e mente con percorsi su misura, pensati per
-            esaltare la tua naturale bellezza.
-          </SubHeading>
+      <Wrapper>
+        <div className="w-full flex flex-col gap-10 md:gap-16">
+          <div className="flex flex-col items-center text-center gap-5 md:gap-8">
+            <Heading textColor="text-gray-700" main={true}>
+              I Nostri Servizi
+            </Heading>
+            <SubHeading textColor="text-gray-500">
+              Ritrova l’equilibrio con percorsi su misura, pensati per esaltare
+              la tua naturale bellezza.
+            </SubHeading>
+          </div>
+          <div className="grid grid-cols-1 2xl:grid-cols-2 gap-5 md:gap-0">
+            {services.map((service, index) => {
+              return <ServiceCard data={service} key={index} index={index} />;
+            })}
+          </div>
         </div>
-        <div className="grid grid-cols-1 2xl:grid-cols-2  gap-4">
-          {services.map((service, index) => {
-            return <ServiceCard data={service} key={index} index={index} />;
-          })}
-        </div>
-      </div>
+      </Wrapper>
     </section>
   );
 };

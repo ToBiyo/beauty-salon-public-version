@@ -19,7 +19,7 @@ export const CallButton = ({
   return (
     <button
       onClick={handleCallClick}
-      className={`${bgColor} ${textColor} px-6 py-3 rounded-3xl font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg`}
+      className={`${bgColor} ${textColor} px-4 py-2 xl:px-6 lxl:py-3 rounded-full font-quicksand text-sm lg:text-base flex items-center gap-2 hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg`}
     >
       <ImPhone size={20} />
       {children}

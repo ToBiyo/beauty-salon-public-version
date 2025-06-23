@@ -22,10 +22,6 @@ const config: Config = {
         playfair: ["Playfair Display", "serif"],
         quicksand: ["Quicksand", "sans-serif"],
       },
-      screens: {
-        ...defaultTheme.screens,
-        md: "821px",
-      },
     },
   },
   plugins: [],

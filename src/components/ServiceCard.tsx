@@ -35,20 +35,20 @@ export const ServiceCard = ({
       break;
   }
 
-  let background = index % 2 === 0 ? "bg-secondaryAccent/50 " : "bg-gray-800 ";
+  let background = index % 2 === 0 ? "bg-secondaryAccent/30 " : "bg-gray-800 ";
   let textColor = index % 2 === 0 ? "text-gray-800" : "text-gray-100";
   let titleColor = index % 2 === 0 ? "text-gray-800" : "text-secondaryAccent";
   let buttonBg = index % 2 === 0 ? "bg-gray-800" : "bg-secondaryAccent";
 
   return (
-    <article className="flex flex-col md:flex-row items-center gap-4">
+    <article className="flex flex-col sm:flex-row items-center gap-0">
       <Image
         src={image}
         alt={title}
-        className={`w-full md:w-1/2 ${imageOrder}`}
+        className={`w-full md:w-1/2 ${imageOrder} `}
       />
       <div
-        className={`w-full h-full md:w-1/2 ${background} ${textOrder} flex flex-col items-center justify-center gap-5 p-10 text-center`}
+        className={`w-full h-full md:w-1/2 ${background} ${textOrder} flex flex-col items-center justify-center gap-5 p-5 text-center`}
       >
         <CardTitle textColor={titleColor}>{title}</CardTitle>
         <CardDescriptionText textColor={textColor}>
@@ -56,12 +56,12 @@ export const ServiceCard = ({
         </CardDescriptionText>
         <div className="flex flex-row items-center gap-6">
           <button
-            className={`font-quicksand text-md rounded-3xl py-2 px-4 ${buttonBg} text-white transition-all duration-300 hover:scale-105`}
+            className={`font-quicksand text-sm rounded-3xl py-2 px-4 ${buttonBg} text-white transition-all duration-300 hover:scale-105`}
           >
             Chiama
           </button>
           <button
-            className={`font-quicksand text-md rounded-3xl py-2 px-4 ${buttonBg} text-white transition-all duration-300 hover:scale-105`}
+            className={`font-quicksand text-sm rounded-3xl py-2 px-4 ${buttonBg} text-white transition-all duration-300 hover:scale-105`}
           >
             Scrivici
           </button>

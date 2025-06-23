@@ -13,7 +13,7 @@ export const ReviewCard = ({
   const background = index % 2 === 0 ? "bg-secondaryBg" : "bg-gray-800";
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-stone-100 p-6 h-full flex flex-col">
+    <div className="bg-secondaryBg/30 rounded-lg shadow-sm border border-stone-100 p-3 h-full flex flex-col">
       {/* Rating */}
       <div className="flex items-center gap-1 mb-4">
         {[...Array(5)].map((_, i) => (
@@ -32,10 +32,10 @@ export const ReviewCard = ({
       </p>
 
       {/* Bottom Info */}
-      <div className="border-t border-stone-100 pt-4">
+      <div className="border-t border-gray-200 pt-4">
         <div className="flex items-center justify-between">
           <div>
-            <h4 className="font-playfair font-medium text-stone-800 text-lg">
+            <h4 className="font-playfair font-medium text-secondaryAccent text-xl">
               {user}
             </h4>
           </div>

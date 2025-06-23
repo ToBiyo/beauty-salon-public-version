@@ -8,9 +8,7 @@ export const Text = ({
   textColor: string;
 }) => {
   return (
-    <p
-      className={`text-base md:text:lg xl:text-2xl font-quicksand  leading-loose ${textColor}`}
-    >
+    <p className={`text-base  leading-loose xl:text-md ${textColor}`}>
       {children}
     </p>
   );

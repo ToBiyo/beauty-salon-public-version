@@ -2,6 +2,7 @@ import { Review } from "@/lib/types/types";
 import { ReviewCard } from "./ReviewCard";
 import { Heading } from "./Heading";
 import { SubHeading } from "./SubHeading";
+import { Wrapper } from "./Wrapper";
 //review should be fetched from google places api
 
 const reviews: Review[] = [
@@ -37,33 +38,35 @@ const reviews: Review[] = [
 
 export const Reviews = () => {
   return (
-    <section className="w-full py-40 px-4 bg-stone-50">
-      <div className="w-[80%] mx-auto">
-        {/* Header */}
-        <div className="flex flex-col text-center mb-20 gap-12">
-          <Heading textColor="text-gray-800" main={false}>
-            Cosa Dicono di Noi
-          </Heading>
-          <SubHeading textColor="text-gray-600">
-            La soddisfazione delle nostre clienti è la nostra più grande
-            ricompensa. Scopri le esperienze di chi ha già scelto F Beautyque.
-          </SubHeading>
-        </div>
+    <section className="w-full bg-white flex justify-center py-10  md:py-20 lg:py-32">
+      <Wrapper>
+        <>
+          {/* Header */}
+          <div className="flex flex-col text-center mb-10 gap-5 md:gap-8">
+            <Heading textColor="text-gray-800" main={false}>
+              Cosa Dicono di Noi
+            </Heading>
+            <SubHeading textColor="text-gray-600">
+              La soddisfazione delle nostre clienti è la nostra più grande
+              ricompensa.
+            </SubHeading>
+          </div>
 
-        {/* Reviews Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-          {reviews.map((review, index) => (
-            <ReviewCard key={index} reviewData={review} index={index} />
-          ))}
-        </div>
+          {/* Reviews Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2  gap-10 my-5 md:py-8">
+            {reviews.map((review, index) => (
+              <ReviewCard key={index} reviewData={review} index={index} />
+            ))}
+          </div>
 
-        {/* CTA Button */}
-        <div className="text-center mt-20">
-          <button className="bg-gray-800 text-white px-8 py-3 rounded-full font-medium text-sm hover:bg-stone-700 transition-colors">
-            Prenota il Tuo Trattamento
-          </button>
-        </div>
-      </div>
+          {/* CTA Button */}
+          <div className="text-center mt-10 ">
+            <button className="bg-gray-800 text-white px-8 py-3 rounded-full font-medium text-sm hover:bg-stone-700 transition-colors">
+              Prenota il tuo trattamento
+            </button>
+          </div>
+        </>
+      </Wrapper>
     </section>
   );
 };

@@ -8,9 +8,7 @@ export const CardTitle = ({
   textColor: string;
 }) => {
   return (
-    <h3
-      className={`font-playfair ${textColor} text-lg sm:text-xl md:text-2xl lg:text-3xl pb-1]`}
-    >
+    <h3 className={`font-playfair ${textColor} text-xl xl:text-2xl  ]`}>
       {children}
     </h3>
   );
