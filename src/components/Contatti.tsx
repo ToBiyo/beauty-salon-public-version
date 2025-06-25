@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "motion/react";
 import { Heading } from "./Heading";
 import { Text } from "./Text";
 import { Wrapper } from "./Wrapper";
@@ -14,12 +16,26 @@ import {
 export const Contatti = () => {
   return (
     <section className="w-full h-[auto] bg-secondaryBg flex flex-col items-center justify-center py-10 gap-16  md:py-20 ">
-      <Heading main={false} textColor="text-gray-700">
-        Dove e quando trovarci
-      </Heading>
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: 0.3 }}
+        viewport={{ once: true, amount: 0.5 }}
+      >
+        <Heading main={false} textColor="text-gray-700">
+          Dove e Quando Trovarci
+        </Heading>
+      </motion.div>
+
       <Wrapper>
         <div className="w-full flex flex-col gap-16 justify-center lg:flex-row lg:justify-between lg:min-w-[800px]  ">
-          <div className="w-full lg:w-1/2 flex flex-col items-center justify-center h-full text-center gap-5 ">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4, delay: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
+            className="w-full lg:w-1/2 flex flex-col items-center justify-center h-full text-center gap-5 "
+          >
             <div className="flex  gap-4 items-center">
               <ImCalendar className="text-secondaryAccent text-3xl" />
               <h3 className="font-playfair text-3xl text-sectionBg ">Orari</h3>
@@ -41,8 +57,14 @@ export const Contatti = () => {
                 <Text textColor="text-black">Domenica : Chiuso</Text>
               </div>
             </div>
-          </div>
-          <div className="w-full lg:w-1/2 flex flex-col items-center justify-center gap-5 ">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4, delay: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
+            className="w-full lg:w-1/2 flex flex-col items-center justify-center gap-5 "
+          >
             <div className="flex  gap-4 items-center">
               <ImAddressBook className="text-secondaryAccent text-3xl" />
               <h3 className="font-playfair text-3xl text-gray-700">Contatti</h3>
@@ -63,7 +85,7 @@ export const Contatti = () => {
                 <Text textColor="text-gray-700">+39 3473976763</Text>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </Wrapper>
     </section>

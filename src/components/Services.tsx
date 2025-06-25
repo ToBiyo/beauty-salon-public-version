@@ -1,9 +1,11 @@
-import viso from "../../public/assets/images/viso.png";
+"use client";
+import { motion, Easing } from "motion/react";
 import { ServiceCard } from "./ServiceCard";
 import { ServiceData } from "@/lib/types/types";
 import { SubHeading } from "./SubHeading";
 import { Heading } from "./Heading";
 import { Wrapper } from "./Wrapper";
+import viso from "../../public/assets/images/viso.png";
 
 const services: ServiceData[] = [
   {
@@ -41,17 +43,32 @@ export const Services = () => {
       <Wrapper>
         <div className="w-full flex flex-col gap-10 md:gap-16">
           <div className="flex flex-col items-center text-center gap-5 md:gap-8">
-            <Heading textColor="text-gray-700" main={true}>
-              I Nostri Servizi
-            </Heading>
-            <SubHeading textColor="text-gray-500">
-              Ritrova l’equilibrio con percorsi su misura, pensati per esaltare
-              la tua naturale bellezza.
-            </SubHeading>
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true, amount: 1 }}
+            >
+              <Heading textColor="text-gray-700" main={true}>
+                I Nostri Servizi
+              </Heading>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <SubHeading textColor="text-gray-500">
+                Ritrova l’equilibrio con percorsi su misura, pensati per
+                esaltare la tua naturale bellezza.
+              </SubHeading>
+            </motion.div>
           </div>
-          <div className="grid grid-cols-1 2xl:grid-cols-2 gap-5 md:gap-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-2">
             {services.map((service, index) => {
-              return <ServiceCard data={service} key={index} index={index} />;
+              return (
+                <ServiceCard data={service} index={index} key={service.title} />
+              );
             })}
           </div>
         </div>

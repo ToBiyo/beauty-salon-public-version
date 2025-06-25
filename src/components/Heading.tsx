@@ -1,5 +1,3 @@
-import React from "react";
-
 export const Heading = ({
   children,
   textColor,
@@ -11,7 +9,7 @@ export const Heading = ({
 }) => {
   return main ? (
     <h1
-      className={`text-3xl md:text-4xl xl:text-5xl leading-snug sm:leading-snug md:leading-tight lg:leading-tight xl:leading-none font-playfair ${textColor}`}
+      className={`text-3xl md:text-4xl xl:text-5xl  leading-snug sm:leading-snug md:leading-tight lg:leading-tight xl:leading-none font-playfair  ${textColor}`}
     >
       {children}
     </h1>

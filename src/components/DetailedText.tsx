@@ -5,12 +5,12 @@ import { Text } from "./Text";
 export const DetailedText = ({
   title,
   firstParagraph,
-  secondParagraph,
+
   textColor,
 }: {
   title: string;
   firstParagraph: string;
-  secondParagraph: string | undefined;
+
   textColor: string;
 }) => {
   return (

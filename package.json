@@ -11,6 +11,7 @@
   "dependencies": {
     "@fontsource-variable/playfair-display": "^5.2.5",
     "@fontsource-variable/quicksand": "^5.2.7",
+    "motion": "^12.19.1",
     "next": "15.0.0",
     "react": "19.0.0-rc-65a56d0e-20241020",
     "react-dom": "19.0.0-rc-65a56d0e-20241020",

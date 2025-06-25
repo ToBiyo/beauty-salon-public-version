@@ -1,5 +1,3 @@
-import React from "react";
-
 export const SubHeading = ({
   children,
   textColor,
@@ -9,7 +7,7 @@ export const SubHeading = ({
 }) => {
   return (
     <h3
-      className={`${textColor} font-quicksand text-lg xl:text-xl leading-relaxed`}
+      className={`${textColor} font-quicksand text-lg xl:text-2xl leading-relaxed`}
     >
       {children}
     </h3>

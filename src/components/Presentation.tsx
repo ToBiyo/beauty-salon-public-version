@@ -1,27 +1,33 @@
+"use client";
+import { motion } from "motion/react";
 import Link from "next/link";
 import { Heading } from "./Heading";
 import { SubHeading } from "./SubHeading";
 import { Text } from "./Text";
 import Image from "next/image";
 import { Wrapper } from "./Wrapper";
+import { DecorateImage } from "./DecorateImage";
 
 import me from "../../public/assets/images/about-section.png";
 
 export const Presentation = () => {
   return (
-    <section className="w-full  bg-secondaryAccent/30 relative h-[auto] flex items-center justify-center py-10 md:py-20 xl:py-32">
+    <section className="w-full  bg-secondaryAccent/20 relative h-[auto] flex items-center justify-center py-10 md:py-20 xl:py-32">
       <Wrapper>
         <div className=" max-w-full  h-full flex flex-col lg:flex-row jutify-center gap-10  ">
-          <div className="lg:w-1/2 w-full h-auto  p-0 lg:pr-5 flex items-center justify-center lg:justify-start  ">
-            <div className=" bg-mainBg p-2 w-[350px] md:w-[600px] lg:w-[full]">
-              <Image
-                src={me}
-                alt="Hero Image"
-                className="w-full object-fill relative "
-              />
-            </div>
-          </div>
-          <div className="lg:w-1/2 w-full flex flex-col lg:items-start lg:text-left justify-center gap-5 lg:gap-5 relative  items-center text-center ">
+          <DecorateImage
+            imageSrc={me}
+            background="bg-white"
+            initialAnimation={{ opacity: 0, x: -50 }}
+          />
+
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4, delay: 0.3 }}
+            viewport={{ once: true, amount: 0.5 }}
+            className="lg:w-1/2 w-full flex flex-col lg:items-start lg:text-left justify-center gap-5 lg:gap-5 xl:gap-8 relative  items-center text-center "
+          >
             <Heading textColor="text-gray-800" main={false}>
               F Beautyque
             </Heading>
@@ -41,7 +47,7 @@ export const Presentation = () => {
             >
               Scopri
             </Link>
-          </div>
+          </motion.div>
         </div>
       </Wrapper>
     </section>

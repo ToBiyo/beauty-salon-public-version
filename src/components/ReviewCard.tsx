@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { Review } from "@/lib/types/types";
 import { ImStarFull } from "react-icons/im";
 
@@ -10,10 +11,33 @@ export const ReviewCard = ({
 }) => {
   const { user, review, score } = reviewData;
 
-  const background = index % 2 === 0 ? "bg-secondaryBg" : "bg-gray-800";
+  let animationDelay = 0;
+  switch (index) {
+    case 0:
+      animationDelay = 0.2;
+      break;
+    case 1:
+      animationDelay = 0.4;
+      break;
+    case 2:
+      animationDelay = 0.6;
+      break;
+    case 3:
+      animationDelay = 0.8;
+      break;
+  }
 
   return (
-    <div className="bg-secondaryBg/30 rounded-lg shadow-sm border border-stone-100 p-3 h-full flex flex-col">
+    <motion.article
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.6,
+        delay: animationDelay,
+      }}
+      viewport={{ once: true, amount: 0.5 }}
+      className="bg-secondaryBg/30 rounded-lg shadow-sm border border-stone-100 p-3 h-full flex flex-col"
+    >
       {/* Rating */}
       <div className="flex items-center gap-1 mb-4">
         {[...Array(5)].map((_, i) => (
@@ -49,6 +73,6 @@ export const ReviewCard = ({
           </div>
         </div>
       </div>
-    </div>
+    </motion.article>
   );
 };

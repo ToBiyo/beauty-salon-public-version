@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "motion/react";
 import { Review } from "@/lib/types/types";
 import { ReviewCard } from "./ReviewCard";
 import { Heading } from "./Heading";
@@ -43,28 +45,48 @@ export const Reviews = () => {
         <>
           {/* Header */}
           <div className="flex flex-col text-center mb-10 gap-5 md:gap-8">
-            <Heading textColor="text-gray-800" main={false}>
-              Cosa Dicono di Noi
-            </Heading>
-            <SubHeading textColor="text-gray-600">
-              La soddisfazione delle nostre clienti è la nostra più grande
-              ricompensa.
-            </SubHeading>
+            <motion.div
+              initial={{ opacity: 0, y: -50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
+              <Heading textColor="text-gray-800" main={false}>
+                Cosa Dicono di Noi
+              </Heading>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
+              <SubHeading textColor="text-gray-600">
+                La soddisfazione delle nostre clienti è la nostra più grande
+                ricompensa.
+              </SubHeading>
+            </motion.div>
           </div>
 
           {/* Reviews Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2  gap-10 my-5 md:py-8">
             {reviews.map((review, index) => (
-              <ReviewCard key={index} reviewData={review} index={index} />
+              <ReviewCard key={review.user} reviewData={review} index={index} />
             ))}
           </div>
 
           {/* CTA Button */}
-          <div className="text-center mt-10 ">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.3 }}
+            viewport={{ once: true, amount: 0.5 }}
+            className="text-center mt-10 "
+          >
             <button className="bg-gray-800 text-white px-8 py-3 rounded-full font-medium text-sm hover:bg-stone-700 transition-colors">
               Prenota il tuo trattamento
             </button>
-          </div>
+          </motion.div>
         </>
       </Wrapper>
     </section>

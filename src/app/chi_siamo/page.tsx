@@ -1,5 +1,7 @@
+"use client";
+import { motion } from "motion/react";
 import Image from "next/image";
-
+import { HeroDescription } from "@/components/HeroDescription";
 import { TwoColumnsLayout } from "@/components/TwoColumnsLayout";
 import { ImFacebook, ImInstagram } from "react-icons/im";
 import { Wrapper } from "@/components/Wrapper";
@@ -29,29 +31,25 @@ export default function page() {
   return (
     <main className="flex flex-col items-center bg-background relative mt-[80px]">
       {/* Hero section */}
-      <Hero bgColor="bg-secondaryAccent/30" image={hero} order="order-1">
-        <div className="lg:w-1/2 w-full flex flex-col justify-center gap-5 items-center text-center lg:text-left lg:justify-between lg:items-start lg:gap-8  order-2">
-          <Heading textColor="text-gray-700" main={true}>
-            Il tuo centro benessere, pensato per te
-          </Heading>
-          <SubHeading textColor="text-gray-500">
-            Uno spazio in cui poterti fermare, respirare e ritrovare il tuo
+      <Hero bgColor="bg-secondaryAccent/20" image={hero} order="order-1">
+        <HeroDescription
+          title="Il Tuo Centro Benessere, Pensato Per Te"
+          subTitle="Uno spazio in cui poterti fermare, respirare e ritrovare il tuo
             equilibrio. Ogni trattamento nasce dall’ascolto, ogni percorso è
-            modellato su di te.
-          </SubHeading>
-
-          <a
-            href="#services"
-            className="bg-gray-700 px-5 py-3 text-white rounded-3xl front-quicksand text-sm sm:text-base md:text-base lg:text-lg"
-          >
-            Scopri di più
-          </a>
-        </div>
+            modellato su di te."
+          order="order-2"
+        />
       </Hero>
       {/* About me section */}
       <section className="w-full h-[auto]  bg-white flex flex-col justify-center items-center relative py-20">
         <TwoColumnsLayout>
-          <div className="flex items-center mx-auto justify-center  2xl:w-[650px] 2xl:h-[650px] xl:w-[500px] xl:h-[500px] w-[300px] h-[300px] rounded-full bg-secondaryBg drop-shadow-2xl shadow-gray-900">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
+            className="flex items-center mx-auto justify-center  2xl:w-[650px] 2xl:h-[650px] xl:w-[500px] xl:h-[500px] w-[300px] h-[300px] rounded-full bg-secondaryBg drop-shadow-2xl shadow-gray-900"
+          >
             <Image
               src={me}
               alt={"titolare F Beautique"}
@@ -59,33 +57,55 @@ export default function page() {
               height={100}
               className=" w-[60%]"
             />
-          </div>
-          <div className="flex flex-col gap-10 justify-center">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
+            className="flex flex-col gap-10 justify-center"
+          >
             <DetailedText
-              title="Chi sono"
+              title="Chi Sono"
               firstParagraph="Mi chiamo Francesca e sono la fondatrice di F Beautyque. Da sempre coltivo la passione per il benessere e la cura della persona, e ho deciso di trasformarla in una professione costruita su ascolto, formazione continua e attenzione al dettaglio."
-              secondParagraph="Il mio obiettivo è accompagnare ogni cliente in un percorso di armonia e consapevolezza, offrendo trattamenti personalizzati che valorizzano la bellezza naturale e favoriscono un profondo equilibrio tra corpo e mente."
               textColor="text-gray-700"
             />
             <div className="flex gap-5 justify-center lg:justify-start">
-              <div className="p-3 bg-gray-700 rounded-full">
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                viewport={{ once: true, amount: 0.5 }}
+                className="p-3 bg-gray-700 rounded-full"
+              >
                 <ImFacebook className="text-2xl text-gray-200" />
-              </div>
-              <div className="p-3 bg-gray-700 rounded-full">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.9 }}
+                viewport={{ once: true, amount: 0.5 }}
+                className="p-3 bg-gray-700 rounded-full"
+              >
                 <ImInstagram className="text-2xl text-gray-200" />
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </TwoColumnsLayout>
       </section>
       {/* About our mission */}
-      <section className="w-full h-auto py-20 flex justify-center items-center bg-secondaryAccent/30">
+      <section className="w-full h-auto py-20 flex justify-center items-center bg-secondaryAccent/20">
         <TwoColumnsLayout>
-          <div className="flex flex-col gap-10 justify-center order-2 lg:order-1">
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true, amount: 0.5 }}
+            className="flex flex-col gap-10 justify-center order-2 lg:order-1"
+          >
             <DetailedText
-              title="Il nostro approccio"
+              title="Il Nostro Approccio"
               firstParagraph="Crediamo in un’estetica che non impone modelli, ma che esalta la naturale unicità di ogni persona. Ogni trattamento è pensato su misura, frutto di ascolto e analisi attenta delle esigenze di ognuno."
-              secondParagraph="Lavoriamo con delicatezza e competenza per offrire non solo risultati visibili, ma anche esperienze di benessere durature, in un ambiente che trasmette tranquillità e professionalità."
               textColor="text-gray-700"
             />
             <div className="flex flex-col gap-5 items-center text-center lg:items-start lg:text-left">
@@ -102,56 +122,97 @@ export default function page() {
                 </CallButton>
               </div>
             </div>
-          </div>
-          <div className="bg-grayBackground order-1 lg:order-2">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: -100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true, amount: 0.5 }}
+            className="bg-grayBackground order-1 lg:order-2"
+          >
             <ThreeImagesLayout
               main={trattamento}
               second={trattamento2}
               third={trattamento1}
             />
-          </div>
+          </motion.div>
         </TwoColumnsLayout>
       </section>
       {/* Products line */}
       <section className="w-full minh-[100vh] bg-grayBackground py-20 md:py-32 flex justify-center">
         <Wrapper>
           <div className="text-center flex flex-col gap-8 lg:gap-16">
-            <div className="flex flex-col gap-5 lg:gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
+              className="flex flex-col gap-5 lg:gap-8"
+            >
               <Heading main={false} textColor="text-gray-700">
-                La mia linea di prodotti
+                La Nostra Linea Di Prodotti
               </Heading>
-
               <SubHeading textColor="text-gray-600">
                 Ho creato una linea di prodotti cosmetici che racchiude la mia
                 visione di bellezza e benessere: formulazioni essenziali,
                 efficaci e rispettose della pelle.
               </SubHeading>
-            </div>
+            </motion.div>
 
             <div className="w-full flex flex-col items-center gap-4">
               <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 ">
-                <ProductCard src={product3} />
-                <div className=" bg-secondaryAccent/30 flex items-center justify-center p-5">
-                  <Image
-                    src={product1}
-                    alt="product1"
-                    className="w-[80%]"
-                  ></Image>
-                </div>
-                <div className=" bg-gray-700 flex items-center justify-center p-5 md:order-last lg:order-3">
+                <motion.div
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.3 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  className=" bg-gray-700 flex items-center justify-center p-5 "
+                >
                   <Image
                     src={product4}
                     alt="product1"
                     className="w-[80%]"
                   ></Image>
-                </div>
-                <div className=" bg-secondaryAccent/30 flex items-center justify-center p-5 lg:order-last">
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.6 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  className=" bg-secondaryAccent/20 flex items-center justify-center p-5"
+                >
+                  <Image
+                    src={product1}
+                    alt="product1"
+                    className="w-[80%]"
+                  ></Image>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.9 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  className=" bg-gray-700 flex items-center justify-center p-5 md:order-last lg:order-3"
+                >
+                  <Image
+                    src={product4}
+                    alt="product1"
+                    className="w-[80%]"
+                  ></Image>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 1.2 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  className=" bg-secondaryAccent/20 flex items-center justify-center p-5 lg:order-last"
+                >
                   <Image
                     src={product2}
                     alt="product1"
                     className="w-[80%]"
                   ></Image>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
@@ -160,13 +221,30 @@ export default function page() {
       {/* About our beauty center */}
       <section className="w-full py-20 flex justify-center items-center bg-secondaryBg">
         <TwoColumnsLayout>
-          <ThreeImagesLayout main={spazio1} second={spazio2} third={spazio3} />
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true, amount: 0.5 }}
+            className="bg-grayBackground order-1 lg:order-2"
+          >
+            <ThreeImagesLayout
+              main={trattamento}
+              second={trattamento2}
+              third={trattamento1}
+            />
+          </motion.div>
 
-          <div className="flex flex-col gap-10 justify-center">
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4, delay: 0.3 }}
+            viewport={{ once: true, amount: 0.5 }}
+            className="flex flex-col gap-10 justify-center"
+          >
             <DetailedText
-              title="Un luogo dove ritrovare te stessa"
+              title="Un Luogo Dove Ritrovare Te Stessa"
               firstParagraph="Ogni ambiente del nostro centro è progettato per accoglierti in un’atmosfera rilassante e armoniosa. Luci soffuse, materiali naturali e profumi avvolgenti contribuiscono a creare uno spazio sicuro e rigenerante."
-              secondParagraph="Che tu venga per un trattamento, una coccola o semplicemente per staccare la mente, vogliamo che ogni momento trascorso qui sia una pausa preziosa dedicata solo a te."
               textColor="text-gary-700"
             />
 
@@ -184,7 +262,7 @@ export default function page() {
                 </CallButton>
               </div>
             </div>
-          </div>
+          </motion.div>
         </TwoColumnsLayout>
       </section>
     </main>

@@ -1,4 +1,4 @@
-import React from "react";
+import { motion } from "motion/react";
 import Image from "next/image";
 import { ServiceData } from "@/lib/types/types";
 import { CardTitle } from "./CardTitle";
@@ -15,40 +15,53 @@ export const ServiceCard = ({
 
   let imageOrder = "";
   let textOrder = "";
-
+  let animationDelay = 0;
   switch (index) {
     case 0:
       imageOrder = "order-1";
       textOrder = "order-2";
+      animationDelay = 0.2;
       break;
     case 1:
       imageOrder = " md:order-2 2xl:order-1";
       textOrder = "2xl:order-2";
+      animationDelay = 0.4;
       break;
     case 2:
       imageOrder = "2xl:order-2";
       textOrder = "2xl:order-1";
+      animationDelay = 0.6;
       break;
     case 3:
       imageOrder = " md:order-2 2xl:order-2";
       textOrder = "2xl:order-1";
+      animationDelay = 0.8;
       break;
   }
 
-  let background = index % 2 === 0 ? "bg-secondaryAccent/30 " : "bg-gray-800 ";
+  let background = index % 2 === 0 ? "bg-secondaryAccent/20" : "bg-gray-700";
   let textColor = index % 2 === 0 ? "text-gray-800" : "text-gray-100";
   let titleColor = index % 2 === 0 ? "text-gray-800" : "text-secondaryAccent";
   let buttonBg = index % 2 === 0 ? "bg-gray-800" : "bg-secondaryAccent";
 
   return (
-    <article className="flex flex-col sm:flex-row items-center gap-0">
+    <motion.article
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{
+        duration: 0.4,
+        delay: animationDelay,
+      }}
+      viewport={{ once: true, amount: 0.1 }}
+      className={`flex flex-col sm:flex-row items-center gap-0 ${background} `}
+    >
       <Image
         src={image}
         alt={title}
         className={`w-full md:w-1/2 ${imageOrder} `}
       />
       <div
-        className={`w-full h-full md:w-1/2 ${background} ${textOrder} flex flex-col items-center justify-center gap-5 p-5 text-center`}
+        className={`w-full h-[full] md:w-1/2  ${textOrder} flex flex-col items-center justify-center gap-5 p-5 text-center`}
       >
         <CardTitle textColor={titleColor}>{title}</CardTitle>
         <CardDescriptionText textColor={textColor}>
@@ -67,6 +80,6 @@ export const ServiceCard = ({
           </button>
         </div>
       </div>
-    </article>
+    </motion.article>
   );
 };
