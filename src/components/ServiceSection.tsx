@@ -8,6 +8,7 @@ type ServiceDataProp = {
   description: string;
   imageUrl: StaticImageData;
   buttonBg: string;
+  id: string;
 };
 
 export const ServiceSection = ({
@@ -17,7 +18,7 @@ export const ServiceSection = ({
   serviceData: ServiceDataProp;
   index: number;
 }) => {
-  const { title, description, imageUrl, buttonBg } = serviceData;
+  const { title, description, imageUrl, buttonBg, id } = serviceData;
 
   const background =
     index % 2 === 0
@@ -29,12 +30,13 @@ export const ServiceSection = ({
   const order = index % 2 === 0 ? "" : "order-first lg:order-first";
 
   const ImageInitialAnimation =
-    index % 2 === 0 ? { opacity: 0, x: -50 } : { opacity: 0, x: 50 };
+    index % 2 === 0 ? { opacity: 0, x: -100 } : { opacity: 0, x: 100 };
   const DescripotionInitialAnimation =
-    index % 2 === 0 ? { opacity: 0, x: 50 } : { opacity: 0, x: -50 };
+    index % 2 === 0 ? { opacity: 0, y: 100 } : { opacity: 0, y: -100 };
 
   return (
     <section
+      id={id}
       className={`w-full ${background.containerBg} py-20 xl:py-32 flex justify-center`}
     >
       <TwoColumnsLayout>

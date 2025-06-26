@@ -1,5 +1,7 @@
 import { motion } from "motion/react";
 import Image from "next/image";
+import { WhatsAppButton } from "./WhatsappButton";
+import { CallButton } from "./CallButton";
 import { ServiceData } from "@/lib/types/types";
 import { CardTitle } from "./CardTitle";
 import { CardDescriptionText } from "./CardDescriptionText";
@@ -15,27 +17,27 @@ export const ServiceCard = ({
 
   let imageOrder = "";
   let textOrder = "";
-  let animationDelay = 0;
+
   switch (index) {
     case 0:
       imageOrder = "order-1";
       textOrder = "order-2";
-      animationDelay = 0.2;
+
       break;
     case 1:
       imageOrder = " md:order-2 2xl:order-1";
       textOrder = "2xl:order-2";
-      animationDelay = 0.4;
+
       break;
     case 2:
       imageOrder = "2xl:order-2";
       textOrder = "2xl:order-1";
-      animationDelay = 0.6;
+
       break;
     case 3:
       imageOrder = " md:order-2 2xl:order-2";
       textOrder = "2xl:order-1";
-      animationDelay = 0.8;
+
       break;
   }
 
@@ -46,13 +48,13 @@ export const ServiceCard = ({
 
   return (
     <motion.article
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
       transition={{
-        duration: 0.4,
-        delay: animationDelay,
+        duration: 0.8,
+        delay: 0.3,
       }}
-      viewport={{ once: true, amount: 0.1 }}
+      viewport={{ once: true, amount: 0.3 }}
       className={`flex flex-col sm:flex-row items-center gap-0 ${background} `}
     >
       <Image
@@ -67,18 +69,6 @@ export const ServiceCard = ({
         <CardDescriptionText textColor={textColor}>
           {description}
         </CardDescriptionText>
-        <div className="flex flex-row items-center gap-6">
-          <button
-            className={`font-quicksand text-sm rounded-3xl py-2 px-4 ${buttonBg} text-white transition-all duration-300 hover:scale-105`}
-          >
-            Chiama
-          </button>
-          <button
-            className={`font-quicksand text-sm rounded-3xl py-2 px-4 ${buttonBg} text-white transition-all duration-300 hover:scale-105`}
-          >
-            Scrivici
-          </button>
-        </div>
       </div>
     </motion.article>
   );

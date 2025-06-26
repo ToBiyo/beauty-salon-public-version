@@ -1,12 +1,13 @@
 "use client";
-import { motion, Easing } from "motion/react";
+import { motion } from "motion/react";
 import { ServiceCard } from "./ServiceCard";
 import { ServiceData } from "@/lib/types/types";
 import { SubHeading } from "./SubHeading";
 import { Heading } from "./Heading";
 import { Wrapper } from "./Wrapper";
 import viso from "../../public/assets/images/viso.png";
-
+import { WhatsAppButton } from "./WhatsappButton";
+import { CallButton } from "./CallButton";
 const services: ServiceData[] = [
   {
     title: "Consulenza Personalizzata",
@@ -37,15 +38,15 @@ const services: ServiceData[] = [
 export const Services = () => {
   return (
     <section
-      id="services"
+      id="first"
       className="w-full bg-white flex justify-center py-10 md:py-20 lg:py-32"
     >
       <Wrapper>
-        <div className="w-full flex flex-col gap-10 md:gap-16">
-          <div className="flex flex-col items-center text-center gap-5 md:gap-8">
+        <div className="w-full flex flex-col gap-10 md:gap-16 items-center">
+          <div className="flex flex-col items-center text-center gap-5 md:gap-8 xl:max-w-[50%]">
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true, amount: 1 }}
             >
@@ -54,9 +55,10 @@ export const Services = () => {
               </Heading>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
+              initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              viewport={{ once: true, amount: 1 }}
             >
               <SubHeading textColor="text-gray-500">
                 Ritrova l’equilibrio con percorsi su misura, pensati per
@@ -64,13 +66,34 @@ export const Services = () => {
               </SubHeading>
             </motion.div>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-2">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-2 xl:my-10">
             {services.map((service, index) => {
               return (
                 <ServiceCard data={service} index={index} key={service.title} />
               );
             })}
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: -100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: true, amount: 1 }}
+            className="flex flex-col justify-center items-center text-center w-full gap-5 md:gap-10 xl:max-w-[60%]"
+          >
+            <SubHeading textColor="text-gray-700">
+              È tempo di prenderti cura di te. Prenota oggi stesso e inizia il
+              tuo percorso verso una bellezza autentica e duratura.
+            </SubHeading>
+            <div className="flex flex-row items-center gap-6">
+              <WhatsAppButton bgColor={"bg-gray-700"} textColor="text-gray-200">
+                Scrivici
+              </WhatsAppButton>
+              <CallButton bgColor={"bg-gray-700"} textColor="text-gray-200">
+                Chiamaci
+              </CallButton>
+            </div>
+          </motion.div>
         </div>
       </Wrapper>
     </section>

@@ -19,7 +19,7 @@ export const Contatti = () => {
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, delay: 0.3 }}
+        transition={{ duration: 0.4, delay: 0.25 }}
         viewport={{ once: true, amount: 0.5 }}
       >
         <Heading main={false} textColor="text-gray-700">
@@ -61,17 +61,17 @@ export const Contatti = () => {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4, delay: 0.5 }}
+            transition={{ duration: 0.4, delay: 0.75 }}
             viewport={{ once: true, amount: 0.5 }}
             className="w-full lg:w-1/2 flex flex-col items-center justify-center gap-5 "
           >
-            <div className="flex  gap-4 items-center">
+            <div className="flex  gap-4 items-center ">
               <ImAddressBook className="text-secondaryAccent text-3xl" />
               <h3 className="font-playfair text-3xl text-gray-700">Contatti</h3>
             </div>
-            <div className="flex flex-col  gap-5 text-sectionBg items-center">
-              <div className="flex gap-2 items-center ">
-                <ImLocation className="text-secondaryAccent text-xl" />
+            <div className="flex flex-col  gap-5 text-sectionBg items-center lg:min-w-[600px]">
+              <div className="flex gap-2 items-center text-center">
+                <ImLocation className="text-secondaryAccent text-xl " />
                 <Text textColor="text-gray-700">
                   Via Nazionale, 41b, Perdaxius, (SU), Sardegna
                 </Text>

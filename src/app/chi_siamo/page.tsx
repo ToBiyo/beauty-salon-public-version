@@ -9,23 +9,18 @@ import { ThreeImagesLayout } from "@/components/ThreeImagesLayout";
 import { DetailedText } from "@/components/DetailedText";
 import { SubHeading } from "@/components/SubHeading";
 import { Heading } from "@/components/Heading";
-import ProductCard from "@/components/ProductCard";
 import { WhatsAppButton } from "@/components/WhatsappButton";
+import { CallButton } from "@/components/CallButton";
+import { Hero } from "@/components/Hero";
+import { Text } from "@/components/Text";
 import me from "../../../public/assets/images/me.png";
 import hero from "../../../public/assets/images/hero3.jpg";
 import product1 from "../../../public/assets/images/prodotto1.png";
 import product2 from "../../../public/assets/images/prodotto2.png";
-import product3 from "../../../public/assets/images/prodotto3.png";
 import product4 from "../../../public/assets/images/prodotto4.png";
 import trattamento from "../../../public/assets/images/trattamento_viso.png";
 import trattamento1 from "../../../public/assets/images/new.jpg";
 import trattamento2 from "../../../public/assets/images/hero2.jpg";
-import spazio3 from "../../../public/assets/images/spazio3.jpg";
-import spazio1 from "../../../public/assets/images/spazio1.jpg";
-import spazio2 from "../../../public/assets/images/spazio2.jpg";
-import { CallButton } from "@/components/CallButton";
-import { Hero } from "@/components/Hero";
-import { Text } from "@/components/Text";
 
 export default function page() {
   return (
@@ -46,7 +41,7 @@ export default function page() {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
             viewport={{ once: true, amount: 0.5 }}
             className="flex items-center mx-auto justify-center  2xl:w-[650px] 2xl:h-[650px] xl:w-[500px] xl:h-[500px] w-[300px] h-[300px] rounded-full bg-secondaryBg drop-shadow-2xl shadow-gray-900"
           >
@@ -61,7 +56,7 @@ export default function page() {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true, amount: 0.5 }}
             className="flex flex-col gap-10 justify-center"
           >
@@ -70,26 +65,24 @@ export default function page() {
               firstParagraph="Mi chiamo Francesca e sono la fondatrice di F Beautyque. Da sempre coltivo la passione per il benessere e la cura della persona, e ho deciso di trasformarla in una professione costruita su ascolto, formazione continua e attenzione al dettaglio."
               textColor="text-gray-700"
             />
-            <div className="flex gap-5 justify-center lg:justify-start">
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                viewport={{ once: true, amount: 0.5 }}
-                className="p-3 bg-gray-700 rounded-full"
-              >
-                <ImFacebook className="text-2xl text-gray-200" />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.9 }}
-                viewport={{ once: true, amount: 0.5 }}
-                className="p-3 bg-gray-700 rounded-full"
-              >
-                <ImInstagram className="text-2xl text-gray-200" />
-              </motion.div>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true, amount: 0.5 }}
+              className="flex gap-5 justify-center lg:justify-start"
+            >
+              <div className="p-3 bg-gray-700 rounded-full hover:bg-secondaryAccent transition-all duration-300">
+                <a href="https://www.facebook.com" target="_blank">
+                  <ImFacebook className="text-2xl text-gray-200" />
+                </a>
+              </div>
+              <div className="p-3 bg-gray-700 rounded-full hover:bg-secondaryAccent transition-all duration-300">
+                <a href="https://www.instagram.com/" target="_blank">
+                  <ImInstagram className="text-2xl text-gray-200" />
+                </a>
+              </div>
+            </motion.div>
           </motion.div>
         </TwoColumnsLayout>
       </section>
@@ -99,7 +92,7 @@ export default function page() {
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
             viewport={{ once: true, amount: 0.5 }}
             className="flex flex-col gap-10 justify-center order-2 lg:order-1"
           >
@@ -124,8 +117,8 @@ export default function page() {
             </div>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: -100 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true, amount: 0.5 }}
             className="bg-grayBackground order-1 lg:order-2"
@@ -141,13 +134,13 @@ export default function page() {
       {/* Products line */}
       <section className="w-full minh-[100vh] bg-grayBackground py-20 md:py-32 flex justify-center">
         <Wrapper>
-          <div className="text-center flex flex-col gap-8 lg:gap-16">
+          <div className="text-center flex flex-col gap-8 lg:gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true, amount: 0.5 }}
-              className="flex flex-col gap-5 lg:gap-8"
+              className="flex flex-col gap-5 lg:gap-8 xl:max-w-[50%]"
             >
               <Heading main={false} textColor="text-gray-700">
                 La Nostra Linea Di Prodotti
@@ -224,9 +217,9 @@ export default function page() {
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
             viewport={{ once: true, amount: 0.5 }}
-            className="bg-grayBackground order-1 lg:order-2"
+            className="bg-grayBackground order-first"
           >
             <ThreeImagesLayout
               main={trattamento}
@@ -236,9 +229,9 @@ export default function page() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4, delay: 0.3 }}
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true, amount: 0.5 }}
             className="flex flex-col gap-10 justify-center"
           >

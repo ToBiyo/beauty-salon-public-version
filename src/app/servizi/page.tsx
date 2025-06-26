@@ -15,6 +15,7 @@ export default function page() {
               dignissimos accusamus inventore nisi. Lorem ipsum dolor sit amet
               consectetur, adipisicing elit.`,
       imageUrl: viso,
+      id: "consulenza",
     },
     {
       buttonBg: "bg-gray-700",
@@ -25,6 +26,7 @@ export default function page() {
               dignissimos accusamus inventore nisi. Lorem ipsum dolor sit amet
               consectetur, adipisicing elit.`,
       imageUrl: viso,
+      id: "trattamenti_viso",
     },
     {
       buttonBg: "bg-gray-700",
@@ -35,6 +37,7 @@ export default function page() {
               dignissimos accusamus inventore nisi. Lorem ipsum dolor sit amet
               consectetur, adipisicing elit.`,
       imageUrl: viso,
+      id: "trattamenti_viso",
     },
     {
       buttonBg: "bg-gray-700",
@@ -45,6 +48,7 @@ export default function page() {
               dignissimos accusamus inventore nisi. Lorem ipsum dolor sit amet
               consectetur, adipisicing elit.`,
       imageUrl: viso,
+      id: "estetica_plus",
     },
   ];
 

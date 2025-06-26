@@ -16,10 +16,10 @@ export const DecorateImage = ({
   return (
     <motion.div
       initial={initialAnimation}
-      whileInView={{ opacity: 1, x: 0 }}
+      whileInView={{ opacity: 1, x: 0, y: 0 }}
       transition={{ duration: 0.6, delay: 0.3 }}
       viewport={{ once: true, amount: 0.5 }}
-      className={`p-4 ${background} drop-shadow-xl shadow-gray-700`}
+      className={`p-4 ${background} drop-shadow-xl shadow-gray-700 w-full `}
     >
       <Image
         src={imageSrc}

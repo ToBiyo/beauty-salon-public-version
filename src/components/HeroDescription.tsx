@@ -7,10 +7,12 @@ export const HeroDescription = ({
   title,
   subTitle,
   order,
+  showLink,
 }: {
   title: string;
   subTitle: string;
   order?: string;
+  showLink?: boolean;
 }) => {
   return (
     <div
@@ -32,18 +34,20 @@ export const HeroDescription = ({
       >
         <SubHeading textColor="text-gray-500">{subTitle}</SubHeading>
       </motion.div>
-      <motion.div
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.4, delay: 0.9 }}
-      >
-        <a
-          href="#services"
-          className="bg-gray-700 px-5 py-3 text-white rounded-3xl front-quicksand text-sm sm:text-base md:text-base lg:text-lg"
+      {showLink && (
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.4, delay: 0.9 }}
         >
-          Scopri di più
-        </a>
-      </motion.div>
+          <a
+            href="#first"
+            className="bg-gray-700 px-5 py-3 text-white rounded-3xl front-quicksand text-sm sm:text-base md:text-base lg:text-lg hover:bg-gray-600 duration-300 "
+          >
+            Scopri di più
+          </a>
+        </motion.div>
+      )}
     </div>
   );
 };

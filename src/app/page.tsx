@@ -15,6 +15,7 @@ export default function Home() {
           subTitle="Ritrova l’equilibrio tra corpo e mente con percorsi su misura,
             pensati per esaltare la tua naturale bellezza."
           order="order-2 lg:order-1"
+          showLink={true}
         />
       </Hero>
       <Services />

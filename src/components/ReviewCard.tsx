@@ -2,38 +2,16 @@ import { motion } from "motion/react";
 import { Review } from "@/lib/types/types";
 import { ImStarFull } from "react-icons/im";
 
-export const ReviewCard = ({
-  reviewData,
-  index,
-}: {
-  reviewData: Review;
-  index: number;
-}) => {
+export const ReviewCard = ({ reviewData }: { reviewData: Review }) => {
   const { user, review, score } = reviewData;
-
-  let animationDelay = 0;
-  switch (index) {
-    case 0:
-      animationDelay = 0.2;
-      break;
-    case 1:
-      animationDelay = 0.4;
-      break;
-    case 2:
-      animationDelay = 0.6;
-      break;
-    case 3:
-      animationDelay = 0.8;
-      break;
-  }
 
   return (
     <motion.article
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{
         duration: 0.6,
-        delay: animationDelay,
+        delay: 0.3,
       }}
       viewport={{ once: true, amount: 0.5 }}
       className="bg-secondaryBg/30 rounded-lg shadow-sm border border-stone-100 p-3 h-full flex flex-col"

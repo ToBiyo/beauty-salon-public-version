@@ -7,7 +7,8 @@ import { CallButton } from "./CallButton";
 
 export type animationProp = {
   opacity: number;
-  x: number;
+  x?: number;
+  y?: number;
 };
 
 export const ServiceDescription = ({
@@ -26,8 +27,8 @@ export const ServiceDescription = ({
   return (
     <motion.div
       initial={initialAnimation}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.6, delay: 0.5 }}
+      whileInView={{ opacity: 1, x: 0, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.6 }}
       viewport={{ once: true, amount: 0.5 }}
       className={`flex flex-col justify-center gap-5 lg:gap-8 xl:gap-12 items-center text-center lg:items-start lg:text-left ${order}`}
     >
