@@ -7,7 +7,7 @@ import { Wrapper } from "./Wrapper";
 
 export const Footer = () => {
   return (
-    <footer className=" min-h-[auto] bg-gray-800 flex flex-col justify-center items-center relative bottom-0 z-20 py-10 ">
+    <footer className="h-auto bg-gray-800 flex flex-col justify-center items-center py-10">
       <Wrapper>
         <>
           <div className="mx-auto max-w-full flex lg:flex-row flex-col w-full lg:items-start items-center justify-between   gap-16">
@@ -37,14 +37,14 @@ export const Footer = () => {
                     target="_blank"
                     className="flex flex-row items-center gap-2 font-quicksand text-lg"
                   >
-                    <ImFacebook2 className="text-gray-100 text-2xl hover:text-accent duration-300" />
+                    <ImFacebook2 className="text-gray-100 text-3xl hover:text-accent duration-300" />
                   </a>
                   <a
                     href="https://www.facebook.com"
                     target="_blank"
                     className="flex flex-row items-center gap-2 font-quicksand text-lg"
                   >
-                    <ImInstagram className="text-gray-100 text-2xl hover:text-accent duration-300" />
+                    <ImInstagram className="text-gray-100 text-3xl hover:text-accent duration-300" />
                   </a>
                 </div>
               </div>

@@ -46,29 +46,22 @@ export const Reviews = () => {
       <Wrapper>
         <>
           {/* Header */}
-          <div className="flex flex-col text-center mb-10 gap-5 md:gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: -50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.3 }}
-              viewport={{ once: true, amount: 0.5 }}
-            >
-              <Heading textColor="text-gray-800" main={false}>
-                Cosa Dicono di Noi
-              </Heading>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.3 }}
-              viewport={{ once: true, amount: 0.5 }}
-            >
-              <SubHeading textColor="text-gray-600">
-                La soddisfazione delle nostre clienti è la nostra più grande
-                ricompensa.
-              </SubHeading>
-            </motion.div>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4, delay: 0.3 }}
+            viewport={{ once: true, amount: 0.5 }}
+            className="flex flex-col text-center mb-10 gap-5 md:gap-8"
+          >
+            <Heading textColor="text-gray-800" main={false}>
+              Cosa Dicono di Noi
+            </Heading>
+
+            <SubHeading textColor="text-gray-600">
+              La soddisfazione delle nostre clienti è la nostra più grande
+              ricompensa.
+            </SubHeading>
+          </motion.div>
 
           {/* Reviews Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2  gap-10 my-5 md:py-8 xl:my-12">
@@ -79,8 +72,8 @@ export const Reviews = () => {
 
           {/* CTA Button */}
           <motion.div
-            initial={{ opacity: 0, y: -100 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: true, amount: 1 }}
             className="flex flex-col justify-center items-center mx-auto text-center w-full gap-5 md:gap-10 xl:max-w-[60%]"

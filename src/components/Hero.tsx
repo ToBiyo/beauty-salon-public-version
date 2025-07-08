@@ -16,18 +16,6 @@ export const Hero = ({
 }) => {
   const imageUrl = typeof image === "string" ? image : image.src;
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
-    },
-  };
-
   return (
     <section
       className={`w-full ${bgColor}  relative h-[auto] flex justify-center items-center py-10 md:py-20 xl:py-32 2xl:py-48`}
@@ -41,7 +29,7 @@ export const Hero = ({
           >
             <motion.div
               className="w-full bg-mainBg p-3 md:w-[600px] xl:w-full"
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
             >

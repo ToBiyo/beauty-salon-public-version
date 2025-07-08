@@ -43,14 +43,14 @@ export default function page() {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.8 }}
             viewport={{ once: true, amount: 0.5 }}
-            className="flex items-center mx-auto justify-center  2xl:w-[650px] 2xl:h-[650px] xl:w-[500px] xl:h-[500px] w-[300px] h-[300px] rounded-full bg-secondaryBg drop-shadow-2xl shadow-gray-900"
+            className="flex items-end mx-auto justify-center  2xl:w-[650px] 2xl:h-[650px] xl:w-[500px] xl:h-[500px] w-[300px] h-[300px]  bg-secondaryBg border-secondaryBg drop-shadow-2xl shadow-gray-900"
           >
             <Image
               src={me}
               alt={"titolare F Beautique"}
               width={200}
               height={100}
-              className=" w-[60%]"
+              className=" w-[80%]"
             />
           </motion.div>
           <motion.div

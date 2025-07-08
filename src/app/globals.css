@@ -12,7 +12,3 @@
   --white: #ffffff;
   --gradient: linear-gradient(135deg, #d4af37 0%, #c19a6b 100%);
 }
-
-body {
-  background-color: #fff;
-}
