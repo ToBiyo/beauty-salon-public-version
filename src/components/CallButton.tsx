@@ -5,10 +5,12 @@ export const CallButton = ({
   children,
   bgColor,
   textColor,
+  animate,
 }: {
   children: React.ReactNode;
-  bgColor: string;
+  bgColor?: string;
   textColor: string;
+  animate?: boolean;
 }) => {
   const handleCallClick = () => {
     // Sostituisci con il tuo numero di telefono
@@ -16,12 +18,18 @@ export const CallButton = ({
     window.location.href = `tel:${phoneNumber}`;
   };
 
+  const animation = animate
+    ? "hover:opacity-90 transition-all transform hover:scale-105 hover:shadow-lg shadow-gray-600 px-4 py-3 xl:px-4 xl:py-4 "
+    : "hover:scale-105";
+
+  const iconColor = animate ? "" : "text-secondaryAccent";
+
   return (
     <button
       onClick={handleCallClick}
-      className={`${bgColor} ${textColor} px-4 py-2 xl:px-6 lxl:py-3 rounded-full font-quicksand text-sm lg:text-base flex items-center gap-2 hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg`}
+      className={`${bgColor} ${textColor}  rounded-sm  text-base font-quicksand leading-loose xl:text-lg italic flex items-center gap-2 ${animation} duration-300`}
     >
-      <ImPhone size={20} />
+      <ImPhone size={20} className={`${iconColor}`} />
       {children}
     </button>
   );

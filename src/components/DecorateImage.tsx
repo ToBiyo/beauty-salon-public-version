@@ -6,11 +6,11 @@ import { animationProp } from "@/components/ServiceDescription";
 
 export const DecorateImage = ({
   imageSrc,
-  background,
+  alt,
   initialAnimation,
 }: {
   imageSrc: StaticImageData | string;
-  background: string;
+  alt: string;
   initialAnimation: animationProp;
 }) => {
   return (
@@ -19,12 +19,12 @@ export const DecorateImage = ({
       whileInView={{ opacity: 1, x: 0, y: 0 }}
       transition={{ duration: 0.6, delay: 0.3 }}
       viewport={{ once: true, amount: 0.5 }}
-      className={`p-4 ${background} drop-shadow-xl shadow-gray-700 w-full `}
+      className={`p-2 lg:p-4 bg-white  drop-shadow-mf lg:drop-shadow-xl shadow-gray-700 w-full`}
     >
       <Image
         src={imageSrc}
-        alt="me"
-        className="w-full object-fill z-20 relative"
+        alt={alt}
+        className="w-full object-fill z-20 relative ]"
       />
     </motion.div>
   );

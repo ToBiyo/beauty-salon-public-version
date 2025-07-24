@@ -1,36 +1,56 @@
 "use client";
 import { motion } from "motion/react";
-import { Heading } from "./Heading";
+import { QuotedTitle } from "./QuotedTitle";
 import { SubHeading } from "./SubHeading";
+import { WhatsAppButton } from "./WhatsappButton";
+import { CallButton } from "./CallButton";
 
 export const HeroDescription = ({
   title,
   subTitle,
   order,
-  showLink,
+  link,
+  callToAction,
 }: {
   title: string;
   subTitle: string;
   order?: string;
-  showLink?: boolean;
+  link?: boolean;
+  callToAction?: boolean;
 }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: -100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.5 }}
-      className={`lg:w-1/2 w-full flex flex-col justify-center items-center text-center gap-5 md:gap-8 xl:gap-10 lg:justify-start lg:items-start lg:text-left ${order}`}
+      className={`lg:w-1/2 w-full flex flex-col justify-center items-center text-center gap-6  lg:justify-start lg:items-start lg:text-left ${order}`}
     >
-      <Heading textColor="text-gray-700" main={true}>
-        {title}
-      </Heading>
+      <QuotedTitle title={title} color="text-mainAccent" />
 
       <SubHeading textColor="text-gray-500">{subTitle}</SubHeading>
+      {callToAction && (
+        <div className="flex gap-5 mt-3">
+          <WhatsAppButton
+            bgColor="bg-mainAccent"
+            textColor="text-gray-100"
+            animate={true}
+          >
+            Contattaci
+          </WhatsAppButton>
+          <CallButton
+            bgColor="bg-mainAccent"
+            textColor="text-gray-100"
+            animate={true}
+          >
+            Chiamaci
+          </CallButton>
+        </div>
+      )}
 
-      {showLink && (
+      {link && (
         <a
           href="#first"
-          className="bg-gray-700 px-5 py-3 text-white rounded-3xl front-quicksand text-sm sm:text-base md:text-base lg:text-lg hover:bg-gray-600 duration-300 "
+          className="bg-mainAccent px-5 py-3 text-white  front-quicksand text-sm sm:text-base md:text-base lg:text-lg hover:scale-105 duration-300 "
         >
           Scopri di più
         </a>

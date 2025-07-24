@@ -11,7 +11,7 @@ export const TwoColumnsLayout = ({
   return (
     <Wrapper>
       <div
-        className={`w-full grid h-[auto] mx-auto grid-cols-1 lg:grid-cols-2 gap-8`}
+        className={`w-full grid h-[auto] mx-auto grid-cols-1 lg:grid-cols-2 gap-10`}
       >
         {left}
 

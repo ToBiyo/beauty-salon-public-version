@@ -4,6 +4,7 @@ import { ImFacebook2 } from "react-icons/im";
 import { ImInstagram } from "react-icons/im";
 import { ImPhone, ImWhatsapp, ImLocation } from "react-icons/im";
 import { Wrapper } from "./Wrapper";
+import { FooterContactsContainer } from "./FooterContactsContainer";
 
 export const Footer = () => {
   return (
@@ -27,53 +28,28 @@ export const Footer = () => {
               </h3>
             </div>
             <div className="flex flex-col gap-8 items-center xl:items-start">
-              <h3 className="text-3xl font-playfair italic text-mainAccent">
+              <h3 className="text-3xl font-playfair italic text-secondaryAccent">
                 Socials
               </h3>
-              <div>
-                <div className="w- full flex flex-row gap-8 xl:items-start items-center duration-300">
-                  <a
-                    href="https://www.facebook.com"
-                    target="_blank"
-                    className="flex flex-row items-center gap-2 font-quicksand text-lg"
-                  >
-                    <ImFacebook2 className="text-gray-100 text-3xl hover:text-accent duration-300" />
-                  </a>
-                  <a
-                    href="https://www.facebook.com"
-                    target="_blank"
-                    className="flex flex-row items-center gap-2 font-quicksand text-lg"
-                  >
-                    <ImInstagram className="text-gray-100 text-3xl hover:text-accent duration-300" />
-                  </a>
-                </div>
+
+              <div className="w- full flex flex-row gap-8 xl:items-start items-center duration-300">
+                <a
+                  href="https://www.instagram.com/fbeautyque/"
+                  target="_blank"
+                  className="flex flex-row items-center gap-2 font-quicksand text-lg"
+                >
+                  <ImFacebook2 className="text-gray-100 text-3xl hover:text-yellow-500 duration-300" />
+                </a>
+                <a
+                  href="https://www.facebook.com/people/F-Beautyque-di-Francesca-Lai/61575575922189/#"
+                  target="_blank"
+                  className="flex flex-row items-center gap-2 font-quicksand text-lg"
+                >
+                  <ImInstagram className="text-gray-100 text-3xl hover:text-yellow-500 duration-300" />
+                </a>
               </div>
             </div>
-            <div className="flex flex-col items-center xl:items-start gap-8">
-              <h3 className="text-3xl font-playfair italic text-mainAccent">
-                Contact
-              </h3>
-              <div className="flex flex-col gap-5  items-center xl:items-start">
-                <div className="flex gap-2 items-center duration-300 text-gray-100 cursor-pointer hover:text-accent">
-                  <ImLocation className="text-xl" />
-                  <p className="text-md font-quicksand text-gray-100">
-                    123 Main St, City, Country
-                  </p>
-                </div>
-                <div className="flex gap-2 items-center duration-300 text-gray-100 cursor-pointer hover:text-accent">
-                  <ImPhone className=" text-xl" />
-                  <p className="text-md font-quicksand text-gray-100">
-                    +1 234 567 890
-                  </p>
-                </div>
-                <div className="flex gap-2 items-center duration-300 text-gray-100 cursor-pointer hover:text-accent">
-                  <ImWhatsapp className="text-xl" />
-                  <p className="text-md font-quicksand text-gray-100">
-                    +1 234 567 890
-                  </p>
-                </div>
-              </div>
-            </div>
+            <FooterContactsContainer />
           </div>
           <div className="max-w-[1440px]  mt-10  border-secondaryAccent border-t-[1px]  justify-center">
             <h2 className="text-gray-100 mt-3 text-center">

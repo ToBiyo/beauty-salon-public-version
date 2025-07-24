@@ -2,11 +2,12 @@
 import { motion } from "motion/react";
 import { Review } from "@/lib/types/types";
 import { ReviewCard } from "./ReviewCard";
-import { Heading } from "./Heading";
+import { CTA } from "./CTA";
+import { DecoratedTitle } from "./DecoratedTitle";
 import { SubHeading } from "./SubHeading";
 import { Wrapper } from "./Wrapper";
 import { WhatsAppButton } from "./WhatsappButton";
-import { CallButton } from "./CallButton";
+
 //review should be fetched from google places api
 
 const reviews: Review[] = [
@@ -42,7 +43,7 @@ const reviews: Review[] = [
 
 export const Reviews = () => {
   return (
-    <section className="w-full bg-white flex justify-center py-10  md:py-20 lg:py-32">
+    <section className="w-full  flex justify-center py-10  md:py-20 lg:py-32">
       <Wrapper>
         <>
           {/* Header */}
@@ -51,46 +52,33 @@ export const Reviews = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4, delay: 0.3 }}
             viewport={{ once: true, amount: 0.5 }}
-            className="flex flex-col text-center mb-10 gap-5 md:gap-8"
+            className="flex flex-col text-center mb-10 gap-5 md:gap-8 "
           >
-            <Heading textColor="text-gray-800" main={false}>
-              Cosa Dicono di Noi
-            </Heading>
+            <DecoratedTitle
+              title="Cosa dicono di noi"
+              color="text-gray-700"
+              borderColor="bg-secondaryAccent"
+              centered={true}
+            />
 
             <SubHeading textColor="text-gray-600">
-              La soddisfazione delle nostre clienti è la nostra più grande
-              ricompensa.
+              “La soddisfazione delle nostre clienti è il nostro orgoglio più
+              grande.”
             </SubHeading>
           </motion.div>
 
           {/* Reviews Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2  gap-10 my-5 md:py-8 xl:my-12">
+          <div className="w-full grid grid-cols-1 md:grid-cols-2  gap-10 my-5 md:py-8 xl:my-12 ">
             {reviews.map((review, index) => (
               <ReviewCard key={review.user} reviewData={review} />
             ))}
           </div>
 
           {/* CTA Button */}
-          <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            viewport={{ once: true, amount: 1 }}
-            className="flex flex-col justify-center items-center mx-auto text-center w-full gap-5 md:gap-10 xl:max-w-[60%]"
-          >
-            <SubHeading textColor="text-gray-700">
-              Come loro, anche tu puoi sentirti coccolata e valorizzata. Prenota
-              oggi e inizia il tuo percorso di benessere con noi.
-            </SubHeading>
-            <div className="flex flex-row items-center gap-6">
-              <WhatsAppButton bgColor={"bg-gray-700"} textColor="text-gray-200">
-                Scrivici
-              </WhatsAppButton>
-              <CallButton bgColor={"bg-gray-700"} textColor="text-gray-200">
-                Chiamaci
-              </CallButton>
-            </div>
-          </motion.div>
+          <CTA
+            message="Come loro, anche tu puoi sentirti coccolata e valorizzata.
+              Prenota oggi e inizia il tuo percorso di benessere con noi."
+          />
         </>
       </Wrapper>
     </section>

@@ -1,14 +1,14 @@
 import { StaticImageData } from "next/image";
 import { TwoColumnsLayout } from "./TwoColumnsLayout";
-import { DecorateImage } from "./DecorateImage";
 import { ServiceDescription } from "./ServiceDescription";
+import { ImagesCarousel } from "./ImagesCarousel";
 
 type ServiceDataProp = {
   title: string;
   description: string;
-  imageUrl: StaticImageData;
-  buttonBg: string;
-  id: string;
+  imageUrl: StaticImageData[];
+  alt: string[];
+  id?: string;
 };
 
 export const ServiceSection = ({
@@ -18,39 +18,43 @@ export const ServiceSection = ({
   serviceData: ServiceDataProp;
   index: number;
 }) => {
-  const { title, description, imageUrl, buttonBg, id } = serviceData;
+  const { title, description, imageUrl, id, alt } = serviceData;
 
-  const background =
+  const properties =
     index % 2 === 0
-      ? { containerBg: "bg-white", imageBg: "bg-secondaryAccent/20" }
-      : index === 1
-      ? { containerBg: "bg-secondaryAccent/20", imageBg: "bg-white" }
-      : { containerBg: "bg-secondaryBg", imageBg: "bg-white" };
+      ? {
+          containerBg: "bg-white",
+          textColor: "text-gray-700",
+          decorativeBg: "bg-secondaryAccent",
+          order: "order-last lg:order-first",
+        }
+      : {
+          containerBg: "bg-secondaryBg",
+          textColor: "text-mainAccent",
+          decorativeBg: "bg-mainAccent",
+          order: "order-last",
+        };
 
-  const order = index % 2 === 0 ? "" : "order-first lg:order-first";
+  const order = index % 2 !== 0 ? "order-first lg:order-last" : "order-first";
 
-  const ImageInitialAnimation =
-    index % 2 === 0 ? { opacity: 0, x: -100 } : { opacity: 0, x: 100 };
   const DescripotionInitialAnimation =
     index % 2 === 0 ? { opacity: 0, y: 100 } : { opacity: 0, y: -100 };
 
   return (
     <section
       id={id}
-      className={`w-full ${background.containerBg} py-20 xl:py-32 flex justify-center`}
+      className={`w-full ${properties.containerBg} py-20  flex justify-center`}
     >
       <TwoColumnsLayout>
-        <DecorateImage
-          background={background.imageBg}
-          imageSrc={imageUrl}
-          initialAnimation={ImageInitialAnimation}
-        />
+        <ImagesCarousel images={imageUrl} alt={alt} />
         <ServiceDescription
-          buttonBg={buttonBg}
+          buttonBg={properties.decorativeBg}
           title={title}
           description={description}
-          order={order}
+          order={properties.order}
           initialAnimation={DescripotionInitialAnimation}
+          textColor={properties.textColor}
+          borderColor={properties.decorativeBg}
         />
       </TwoColumnsLayout>
     </section>

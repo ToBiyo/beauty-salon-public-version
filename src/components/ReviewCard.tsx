@@ -14,7 +14,7 @@ export const ReviewCard = ({ reviewData }: { reviewData: Review }) => {
         delay: 0.3,
       }}
       viewport={{ once: true, amount: 0.5 }}
-      className="bg-secondaryBg/30 rounded-lg shadow-sm border border-stone-100 p-3 h-full flex flex-col"
+      className="bg-secondaryBg/30  shadow-sm border border-stone-100 p-3 h-full flex flex-col"
     >
       {/* Rating */}
       <div className="flex items-center gap-1 mb-4">
@@ -22,7 +22,9 @@ export const ReviewCard = ({ reviewData }: { reviewData: Review }) => {
           <ImStarFull
             key={i}
             className={`w-5 h-5 ${
-              i < score ? "fill-mainAccent text-amber-400" : "text-stone-300"
+              i < score
+                ? "fill-secondaryAccent text-amber-400"
+                : "text-stone-300"
             }`}
           />
         ))}
@@ -34,15 +36,15 @@ export const ReviewCard = ({ reviewData }: { reviewData: Review }) => {
       </p>
 
       {/* Bottom Info */}
-      <div className="border-t border-gray-200 pt-4">
+      <div className="border-t border-gray-300 pt-4">
         <div className="flex items-center justify-between">
           <div>
-            <h4 className="font-playfair font-medium text-secondaryAccent text-xl">
+            <h4 className="font-playfair font-medium text-gray-600 text-xl">
               {user}
             </h4>
           </div>
           <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center">
-            <span className="text-mainAccent font-medium text-sm">
+            <span className="text-secondaryAccent font-medium text-sm">
               {user
                 .split(" ")
                 .map((n) => n[0])

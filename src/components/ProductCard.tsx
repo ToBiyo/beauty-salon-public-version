@@ -1,36 +1,56 @@
-"use client";
-import React from "react";
+import { motion } from "motion/react";
 import { StaticImageData } from "next/image";
 import Image from "next/image";
-import { useState } from "react";
-export default function ProductCard({ src }: { src: StaticImageData }) {
-  const [isHover, setIsHover] = useState<boolean>(false);
+
+export default function ProductCard({
+  src,
+  index,
+}: {
+  src: StaticImageData;
+  index: number;
+}) {
+  let cardBackgroundColor: string = "";
+
+  switch (index) {
+    case 0:
+      cardBackgroundColor = "bg-secondaryAccent/40";
+
+      break;
+    case 1:
+      cardBackgroundColor = "bg-gray-600";
+
+      break;
+    case 2:
+      cardBackgroundColor =
+        "bg-secondaryAccent/40 sm:bg-gray-600 lg:bg-secondaryAccent/40";
+
+      break;
+    case 3:
+      cardBackgroundColor =
+        "bg-gray-600 sm:bg-secondaryAccent/40 lg:bg-gray-600";
+
+      break;
+    case 4:
+      cardBackgroundColor = "bg-secondaryAccent/40";
+
+      break;
+    case 5:
+      cardBackgroundColor = "bg-gray-600";
+
+      break;
+    default:
+      cardBackgroundColor = "bg-secondaryAccent/20";
+  }
 
   return (
-    <div
-      className=" bg-gray-700 flex items-center justify-center  p-5 relative cursor-pointer overflow-hidden"
-      onMouseEnter={() => {
-        setTimeout(() => {
-          setIsHover((prev) => !prev);
-        }, 300);
-      }}
-      onMouseLeave={() => {
-        setIsHover((prev) => !prev);
-      }}
+    <motion.div
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.6, delay: 0.3 }}
+      viewport={{ once: true, amount: 0.5 }}
+      className={`flex  flex-col items-center justify-center pt-5 ${cardBackgroundColor}`}
     >
-      <div
-        className="absolute w-full h-full bg-gray-700 bg-opacity-90 text-slate-100 p-10 flex flex-col items-center justify-center text-center gap-10 duration-200"
-        style={{ opacity: isHover ? 1 : 0 }}
-      >
-        <h3 className="font-playfair text-accent text-2xl">Lorem ipsum</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias sunt
-          molestiae temporibus non, quidem, magni suscipit deleniti harum fugit,
-          quos quisquam praesentium neque veniam dignissimos nemo consequatur
-          quod inventore. Fugit.
-        </p>
-      </div>
       <Image src={src} alt="product1" className="w-[70%]" />
-    </div>
+    </motion.div>
   );
 }

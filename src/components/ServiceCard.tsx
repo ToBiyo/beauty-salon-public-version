@@ -1,7 +1,5 @@
 import { motion } from "motion/react";
 import Image from "next/image";
-import { WhatsAppButton } from "./WhatsappButton";
-import { CallButton } from "./CallButton";
 import { ServiceData } from "@/lib/types/types";
 import { CardTitle } from "./CardTitle";
 import { CardDescriptionText } from "./CardDescriptionText";
@@ -13,38 +11,39 @@ export const ServiceCard = ({
   data: ServiceData;
   index: number;
 }) => {
-  const { title, description, image } = data;
+  const { title, description, image, alt } = data;
 
   let imageOrder = "";
   let textOrder = "";
 
   switch (index) {
     case 0:
-      imageOrder = "order-1";
-      textOrder = "order-2";
+      imageOrder = "order-first";
+      textOrder = "order-last";
 
       break;
     case 1:
-      imageOrder = " md:order-2 2xl:order-1";
-      textOrder = "2xl:order-2";
+      imageOrder = "order-first md:order-last lg:order-first";
+      textOrder = "order-last md:order-first lg-order-last";
 
       break;
     case 2:
-      imageOrder = "2xl:order-2";
-      textOrder = "2xl:order-1";
+      imageOrder = "order-first lg:order-last";
+      textOrder = "order-last lg:order-first";
 
       break;
     case 3:
-      imageOrder = " md:order-2 2xl:order-2";
-      textOrder = "2xl:order-1";
+      imageOrder = "order-first md:order-last ";
+      textOrder = "order-last md:order-first ";
 
       break;
   }
 
-  let background = index % 2 === 0 ? "bg-secondaryAccent/20" : "bg-gray-700";
+  let background = index % 2 === 0 ? "bg-secondaryBg" : "bg-gray-700";
   let textColor = index % 2 === 0 ? "text-gray-800" : "text-gray-100";
-  let titleColor = index % 2 === 0 ? "text-gray-800" : "text-secondaryAccent";
-  let buttonBg = index % 2 === 0 ? "bg-gray-800" : "bg-secondaryAccent";
+  let titleColor = index % 2 === 0 ? "text-mainAccent" : "text-secondaryAccent";
+  let borderColor =
+    index % 2 === 0 ? "border-mainAccent" : "border-secondaryAccent";
 
   return (
     <motion.article
@@ -55,20 +54,22 @@ export const ServiceCard = ({
         delay: 0.3,
       }}
       viewport={{ once: true, amount: 0.3 }}
-      className={`flex flex-col sm:flex-row items-center gap-0 ${background} `}
+      className={`flex flex-col md:flex-row items-center gap-0 ${background} `}
     >
       <Image
         src={image}
-        alt={title}
-        className={`w-full md:w-1/2 ${imageOrder} `}
+        alt={alt}
+        className={`w-full md:w-1/2 ${imageOrder}  h-full object-cover`}
       />
-      <div
-        className={`w-full h-[full] md:w-1/2  ${textOrder} flex flex-col items-center justify-center gap-5 p-5 text-center`}
-      >
-        <CardTitle textColor={titleColor}>{title}</CardTitle>
-        <CardDescriptionText textColor={textColor}>
-          {description}
-        </CardDescriptionText>
+      <div className={`w-full h-full md:w-1/2  ${textOrder}  p-2 `}>
+        <div
+          className={`w-full h-full border-[4px] ${borderColor} flex flex-col justify-center items-center gap-3 text-center p-8 sm:p-5 lg:p-2`}
+        >
+          <CardTitle textColor={titleColor}>{title}</CardTitle>
+          <CardDescriptionText textColor={textColor}>
+            {description}
+          </CardDescriptionText>
+        </div>
       </div>
     </motion.article>
   );
