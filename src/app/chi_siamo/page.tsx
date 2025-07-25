@@ -10,6 +10,7 @@ import { SubHeading } from "@/components/SubHeading";
 import { Heading } from "@/components/Heading";
 import { WhatsAppButton } from "@/components/WhatsappButton";
 import { CallButton } from "@/components/CallButton";
+import { DecorateImage } from "@/components/DecorateImage";
 import { Hero } from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
 import { ImagesCarousel } from "@/components/ImagesCarousel";
@@ -51,23 +52,12 @@ export default function page() {
       {/* About me section */}
       <section className="w-full h-[auto]  bg-white flex flex-col justify-center items-center relative py-20">
         <TwoColumnsLayout>
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            viewport={{ once: true, amount: 0.5 }}
-            className="flex items-end mx-auto justify-center p-4   bg-white shadow-2xl shadow-gray-400"
-          >
-            <Image
-              src={me}
-              alt={
-                "Francesca, fondatrice di F Beautyque, centro estetico a Perdaxius"
-              }
-              width={200}
-              height={100}
-              className=" w-[100%]"
-            />
-          </motion.div>
+          <DecorateImage
+            imageSrc={me}
+            alt="Francesca, fondatrice di F Beautyque, centro estetico a Perdaxius"
+            initialAnimation={{ opacity: 0 }}
+          />
+
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
