@@ -1,12 +1,12 @@
 "use client";
 import { motion } from "motion/react";
 import Link from "next/link";
-import { SubHeading } from "./SubHeading";
-import { QuotedTitle } from "./QuotedTitle";
-import { Text } from "./Text";
-import { Wrapper } from "./Wrapper";
-import { DecorateImage } from "./DecorateImage";
-import me from "../../public/assets/images/home/about-me.jpg";
+import { SubHeading } from "../SubHeading";
+import { QuotedTitle } from "../QuotedTitle";
+import { Text } from "../Text";
+import { Wrapper } from "../Wrapper";
+import { DecorateImage } from "../DecorateImage";
+import me from "../../../public/assets/images/home/about-me.jpg";
 
 export const Presentation = () => {
   return (

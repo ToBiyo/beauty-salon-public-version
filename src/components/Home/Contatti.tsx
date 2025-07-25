@@ -1,21 +1,13 @@
 "use client";
 import { motion } from "motion/react";
-import { QuotedTitle } from "./QuotedTitle";
-import { SubHeading } from "./SubHeading";
-import { Text } from "./Text";
-import { Wrapper } from "./Wrapper";
-import { WhatsAppButton } from "./WhatsappButton";
-import { CallButton } from "./CallButton";
-import { MapsButton } from "./MapsButton";
-import {
-  ImCalendar,
-  ImLocation,
-  ImPhone,
-  ImWhatsapp,
-  ImClock,
-  ImCross,
-  ImAddressBook,
-} from "react-icons/im";
+import { QuotedTitle } from "../QuotedTitle";
+import { SubHeading } from "../SubHeading";
+import { Text } from "../Text";
+import { Wrapper } from "../Wrapper";
+import { WhatsAppButton } from "../WhatsappButton";
+import { CallButton } from "../CallButton";
+import { MapsButton } from "../MapsButton";
+import { ImCalendar, ImClock, ImCross, ImAddressBook } from "react-icons/im";
 
 export const Contatti = () => {
   return (

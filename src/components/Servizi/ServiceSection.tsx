@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
-import { TwoColumnsLayout } from "./TwoColumnsLayout";
+import { TwoColumnsLayout } from "../TwoColumnsLayout";
 import { ServiceDescription } from "./ServiceDescription";
-import { ImagesCarousel } from "./ImagesCarousel";
+import { ImagesCarousel } from "../ImagesCarousel";
 
 type ServiceDataProp = {
   title: string;

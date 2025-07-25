@@ -34,14 +34,14 @@ export const Footer = () => {
 
               <div className="w- full flex flex-row gap-8 xl:items-start items-center duration-300">
                 <a
-                  href="https://www.instagram.com/fbeautyque/"
+                  href="https://www.facebook.com/people/F-Beautyque-di-Francesca-Lai/61575575922189/#"
                   target="_blank"
                   className="flex flex-row items-center gap-2 font-quicksand text-lg"
                 >
                   <ImFacebook2 className="text-gray-100 text-3xl hover:text-yellow-500 duration-300" />
                 </a>
                 <a
-                  href="https://www.facebook.com/people/F-Beautyque-di-Francesca-Lai/61575575922189/#"
+                  href="https://www.instagram.com/fbeautyque/"
                   target="_blank"
                   className="flex flex-row items-center gap-2 font-quicksand text-lg"
                 >

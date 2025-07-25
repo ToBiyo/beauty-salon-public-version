@@ -1,15 +1,15 @@
 "use client";
 import { motion } from "motion/react";
-import { ServiceCard } from "./ServiceCard";
+import { ServiceCard } from "../ServiceCard";
+import { SubHeading } from "../SubHeading";
+import { DecoratedTitle } from "../DecoratedTitle";
+import { Wrapper } from "../Wrapper";
+import { CTA } from "../CTA";
 import { ServiceData } from "@/lib/types/types";
-import { SubHeading } from "./SubHeading";
-import { DecoratedTitle } from "./DecoratedTitle";
-import { Wrapper } from "./Wrapper";
-import { CTA } from "./CTA";
-import viso from "../../public/assets/images/home/service-viso.jpg";
-import corpo from "../../public/assets/images/home/service-corpo.jpg";
-import estetica from "../../public/assets/images/home/service-estetica.jpg";
-import consulenza from "../../public/assets/images/home/service-consulenza.jpg";
+import viso from "../../../public/assets/images/home/service-viso.jpg";
+import corpo from "../../../public/assets/images/home/service-corpo.jpg";
+import estetica from "../../../public/assets/images/home/service-estetica.jpg";
+import consulenza from "../../../public/assets/images/home/service-consulenza.jpg";
 
 const services: ServiceData[] = [
   {

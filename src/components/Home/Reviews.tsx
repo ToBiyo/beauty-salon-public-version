@@ -2,11 +2,10 @@
 import { motion } from "motion/react";
 import { Review } from "@/lib/types/types";
 import { ReviewCard } from "./ReviewCard";
-import { CTA } from "./CTA";
-import { DecoratedTitle } from "./DecoratedTitle";
-import { SubHeading } from "./SubHeading";
-import { Wrapper } from "./Wrapper";
-import { WhatsAppButton } from "./WhatsappButton";
+import { CTA } from "../CTA";
+import { DecoratedTitle } from "../DecoratedTitle";
+import { SubHeading } from "../SubHeading";
+import { Wrapper } from "../Wrapper";
 
 //review should be fetched from google places api
 

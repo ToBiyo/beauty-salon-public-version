@@ -1,7 +1,7 @@
 import { Hero } from "@/components/Hero";
 import hero from "../../../public/assets/images/servizi/hero.jpg";
 import { HeroDescription } from "@/components/HeroDescription";
-import { ServiceSection } from "@/components/ServiceSection";
+import { ServiceSection } from "@/components/Servizi/ServiceSection";
 import consulenza from "../../../public/assets/images/servizi/consulenza1.jpg";
 import consulenza1 from "../../../public/assets/images/servizi/consulenza2.jpg";
 import consulenza2 from "../../../public/assets/images/servizi/consulenza3.jpg";
@@ -14,6 +14,22 @@ import corpo2 from "../../../public/assets/images/servizi/corpo2.jpg";
 import viso from "../../../public/assets/images/servizi/viso.jpg";
 import viso1 from "../../../public/assets/images/servizi/viso2.jpg";
 import viso2 from "../../../public/assets/images/servizi/viso3.jpg";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Servizi Estetici – F Beautyque, Perdaxius",
+  description:
+    "Scopri i nostri trattamenti viso, corpo, estetica di base e benessere. F Beautyque offre soluzioni professionali personalizzate per ogni esigenza.",
+  keywords: [
+    "servizi estetici Perdaxius",
+    "trattamenti viso e corpo",
+    "estetica base",
+    "massaggi rilassanti",
+    "ceretta professionale",
+    "cura della pelle",
+    "personalizzazione trattamenti estetici",
+  ],
+};
 
 export default function page() {
   const services = [

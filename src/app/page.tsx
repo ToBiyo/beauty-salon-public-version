@@ -1,24 +1,26 @@
 import { Metadata } from "next";
-import { Services } from "@/components/Services";
-import { Presentation } from "@/components/Presentation";
-import { Contatti } from "@/components/Contatti";
-import { Reviews } from "@/components/Reviews";
+import { Services } from "@/components/Home/Services";
+import { Presentation } from "@/components/Home/Presentation";
+import { Contatti } from "@/components/Home/Contatti";
+import { Reviews } from "@/components/Home/Reviews";
 import { Hero } from "@/components/Hero";
 import { HeroDescription } from "@/components/HeroDescription";
 import hero from "../../public/assets/images/home/hero-home.jpg";
 
 export const metadata: Metadata = {
-  title: "F Beautique – Trattamenti Estetici a Perdaxius",
+  title: "F Beautyque – Centro Estetico a Perdaxius",
   description:
-    "Trattamenti estetici professionali a Perdaxius. Prenota ora la tua consulenza e scopri percorsi personalizzati per il tuo benessere.",
+    "F Beautyque è il tuo centro benessere di fiducia a Perdaxius. Trattamenti estetici professionali, consulenze personalizzate e prodotti naturali per la tua bellezza e relax.",
   keywords: [
     "trattamenti estetici Perdaxius",
     "centro estetico Perdaxius",
     "estetista Perdaxius",
     "cura del viso",
-    "estetica base",
     "trattamenti corpo",
-    "bellezza e benessere",
+    "bellezza naturale",
+    "prodotti estetici professionali",
+    "benessere a Perdaxius",
+    "consulenze estetiche personalizzate",
   ],
 };
 

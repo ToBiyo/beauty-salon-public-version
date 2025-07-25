@@ -1,7 +1,4 @@
-"use client";
-import { motion } from "motion/react";
 import { StaticImageData } from "next/image";
-import Image from "next/image";
 import { Wrapper } from "./Wrapper";
 import { DecorateImage } from "./DecorateImage";
 export const Hero = ({

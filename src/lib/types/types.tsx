@@ -11,3 +11,9 @@ export type ServiceData = {
   image: StaticImageData;
   alt: string;
 };
+
+export type animationProp = {
+  opacity: number;
+  x?: number;
+  y?: number;
+};

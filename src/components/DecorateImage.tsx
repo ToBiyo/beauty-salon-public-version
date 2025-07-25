@@ -2,7 +2,7 @@
 import { motion } from "motion/react";
 import Image from "next/image";
 import { StaticImageData } from "next/image";
-import { animationProp } from "@/components/ServiceDescription";
+import { animationProp } from "@/lib/types/types";
 
 export const DecorateImage = ({
   imageSrc,

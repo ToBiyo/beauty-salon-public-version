@@ -1,17 +1,11 @@
 "use client";
 import { motion } from "motion/react";
-import { Heading } from "./Heading";
-import { Text } from "./Text";
-import { WhatsAppButton } from "./WhatsappButton";
-import { CallButton } from "./CallButton";
-import { QuotedTitle } from "./QuotedTitle";
-import { DecoratedTitle } from "./DecoratedTitle";
-
-export type animationProp = {
-  opacity: number;
-  x?: number;
-  y?: number;
-};
+import { Text } from "../Text";
+import { WhatsAppButton } from "../WhatsappButton";
+import { CallButton } from "../CallButton";
+import { QuotedTitle } from "../QuotedTitle";
+import { DecoratedTitle } from "../DecoratedTitle";
+import { animationProp } from "@/lib/types/types";
 
 export const ServiceDescription = ({
   title,
